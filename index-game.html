@@ -7838,13 +7838,13 @@ const CHANGELOG = [
     window.toggle = function (id, show) {
         if (_originalToggle) _originalToggle.apply(this, arguments);
 
-        // Fade changelog panel — opacity only so it always comes back on main menu
+        // Fade changelog panel — only hide when game actually starts, restore on main menu
         const cl = document.getElementById('changelog-panel');
         if (cl) {
             if (id === 'menu-main' && show) {
                 const enabled = document.getElementById('opt-update-log')?.checked ?? true;
                 cl.style.opacity = enabled ? '1' : '0';
-            } else if (show && id !== 'menu-main') {
+            } else if (id === 'screen-game' && show) {
                 cl.style.opacity = '0';
             }
         }
