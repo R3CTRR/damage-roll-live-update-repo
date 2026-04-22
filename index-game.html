@@ -406,6 +406,7 @@
             width: 230px;
             height: 380px;
             z-index: 10;
+            transition: opacity 0.2s ease;
             display: flex;
             flex-direction: column;
             background: linear-gradient(160deg, rgba(22,10,2,0.97) 0%, rgba(8,4,0,0.98) 100%);
@@ -415,7 +416,7 @@
                 0 0 0 1px rgba(60,35,5,0.4),
                 0 12px 40px rgba(0,0,0,0.9),
                 inset 0 1px 0 rgba(255,200,80,0.07);
-            overflow: hidden;
+            overflow: visible;
         }
         /* Title bar */
         #changelog-panel .cl-titlebar {
@@ -445,6 +446,7 @@
             padding: 12px 14px;
             scrollbar-width: thin;
             scrollbar-color: rgba(160,110,40,0.4) rgba(20,10,2,0.6);
+            border-radius: 0 0 6px 6px;
         }
         #changelog-body::-webkit-scrollbar { width: 5px; }
         #changelog-body::-webkit-scrollbar-track { background: rgba(20,10,2,0.6); }
@@ -5047,7 +5049,7 @@ function toggle(id, s) { document.getElementById(id).style.display = s ? 'flex' 
 async function initGame() {
     // Hide update log when a match starts
     const clPanel = document.getElementById('changelog-panel');
-    if (clPanel) clPanel.style.display = 'none';
+    if (clPanel) clPanel.style.opacity = '0';
 
     if (_customAudioEl) { _customAudioEl.pause(); }
     if (_menuMusicNodes) {
@@ -5113,7 +5115,7 @@ function returnToMenu() {
     const _clPanel = document.getElementById('changelog-panel');
     if (_clPanel) {
         const _clEnabled = document.getElementById('opt-update-log')?.checked ?? true;
-        _clPanel.style.display = _clEnabled ? 'flex' : 'none';
+        _clPanel.style.opacity = _clEnabled ? '1' : '0';
     }
 }
 
@@ -7695,14 +7697,19 @@ function updateHUD() {
 // Add new entries to the TOP of this array. Each entry shows on the main menu.
 const CHANGELOG = [
     {
-        version: 'v0.5.2',
-        name: 'Graphics Overhaul Update',
-        desc: 'Full visual rework of the main menu, new animated rune grid, candle effects, and improved card rendering.'
+        version: 'v0.5.1',
+        name: 'Graphics Overhaul +',
+        desc: 'New graphics options: low, mid, and high quality settings. Auto-update added so you never need to redownload from itch.io. Bug fixes included.'
     },
     {
-        version: 'v0.5.1',
-        name: 'Stability Patch',
-        desc: 'Fixed auto-update redirect handling, stale cache bug, and download stall detection.'
+        version: 'v0.4.0',
+        name: 'Medieval Madness Update',
+        desc: 'New decks and cards added to the roster. Various bug fixes.'
+    },
+    {
+        version: 'v0.3.1',
+        name: 'QOL + Music Update',
+        desc: 'Music upgraded, tons of new settings added, and a custom MP3 URL feature — use your own music in game.'
     }
 ];
 
@@ -7831,14 +7838,14 @@ const CHANGELOG = [
     window.toggle = function (id, show) {
         if (_originalToggle) _originalToggle.apply(this, arguments);
 
-        // Show changelog panel only when main menu is visible, and only if setting allows it
+        // Fade changelog panel — opacity only so it always comes back on main menu
         const cl = document.getElementById('changelog-panel');
         if (cl) {
             if (id === 'menu-main' && show) {
                 const enabled = document.getElementById('opt-update-log')?.checked ?? true;
-                cl.style.display = enabled ? 'flex' : 'none';
-            } else if (show || id === 'menu-main') {
-                cl.style.display = 'none';
+                cl.style.opacity = enabled ? '1' : '0';
+            } else if (show && id !== 'menu-main') {
+                cl.style.opacity = '0';
             }
         }
 
