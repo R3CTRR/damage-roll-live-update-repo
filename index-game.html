@@ -4189,7 +4189,6 @@ function applyGraphicsQuality(val) {
         // Disable rarity glow stylesheet (bloom box-shadows on cards)
         const glowStyle = document.getElementById('rarity-glow-style');
         if (glowStyle) glowStyle.disabled = true;
-        window._highGraphicsEmberBoost = false;
     } else if (_graphicsQuality === 'mid') {
         if (embersEl)     embersEl.style.display     = '';
         if (runeGridEl)   runeGridEl.style.display   = '';
@@ -4202,7 +4201,6 @@ function applyGraphicsQuality(val) {
         const glowStyle = document.getElementById('rarity-glow-style');
         const glowOn = document.getElementById('opt-rarity-glow')?.checked ?? true;
         if (glowStyle) glowStyle.disabled = !glowOn;
-        window._highGraphicsEmberBoost = false;
     } else if (_graphicsQuality === 'high') {
         if (embersEl)     embersEl.style.display     = '';
         if (runeGridEl)   runeGridEl.style.display   = '';
@@ -4214,9 +4212,8 @@ function applyGraphicsQuality(val) {
         const glowStyle = document.getElementById('rarity-glow-style');
         const glowOn = document.getElementById('opt-rarity-glow')?.checked ?? true;
         if (glowStyle) glowStyle.disabled = !glowOn;
-        window._highGraphicsEmberBoost = true;
         // Boost ember particle count/speed for high quality
-        if (window._emberCtx) { window._emberBoostHigh = true; }
+
     }
     saveSettings();
 }
