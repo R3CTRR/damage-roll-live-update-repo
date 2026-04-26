@@ -2549,7 +2549,7 @@
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.33 0 2.363-1.102 2.363-2.41 0 1.308 1.107 2.41 2.438 2.41h.024c1.33 0 2.438-1.102 2.438-2.41 0 1.308 1.032 2.41 2.362 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.436 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.08-2.99-3.13-3.612C19.948 1.339 3.952 1.339 3.13 1.338zM7 9.773c-.27 0-.54.026-.8.077C6.03 9.91 5.878 9.99 5.72 10.078c0 0-1.45 7.44-1.72 9.544C5.568 21.174 8.51 22.59 12 22.59s6.432-1.416 8-2.968c-.27-2.105-1.72-9.544-1.72-9.544a3.936 3.936 0 0 0-.36-.175A3.89 3.89 0 0 0 17.015 9.773c-.96 0-1.733.41-2.274 1.016-.402-.61-1.057-1.016-1.84-1.016-.784 0-1.44.406-1.84 1.016-.54-.606-1.314-1.016-2.274-1.016H7zm-.395 3.38h.014c.48 0 .87.39.87.87v1.74h1.74c.48 0 .87.39.87.87s-.39.87-.87.87H7.49v1.74c0 .48-.39.87-.87.87a.872.872 0 0 1-.872-.87v-1.74H4.01a.872.872 0 0 1-.872-.87c0-.48.39-.87.87-.87h1.742v-1.74c0-.48.39-.87.87-.87zm9.77.508c.6 0 1.087.487 1.087 1.087s-.487 1.087-1.087 1.087-1.087-.487-1.087-1.087.487-1.087 1.087-1.087zm-2.61 2.174c.6 0 1.087.487 1.087 1.087s-.487 1.087-1.087 1.087-1.087-.487-1.087-1.087.487-1.087 1.087-1.087z"/></svg>
             </a>
         </div>
-        <div id="studio-credit">SunCast Studios · v0.5.3</div>
+        <div id="studio-credit">SunCast Studios · v0.5.4</div>
     </div>
 
     <!-- ACHIEVEMENTS -->
@@ -2573,8 +2573,8 @@
         </div>
         <div class="ach-grid" id="ach-grid"></div>
         <div class="ach-save-row">
-            <button class="btn" style="min-width:120px;padding:8px 20px;font-size:10px" onclick="saveAchievements()">💾 Save</button>
-            <span class="ach-save-msg" id="ach-save-msg">Saved!</span>
+            <button class="btn" style="min-width:140px;padding:8px 20px;font-size:10px;border-color:rgba(139,0,0,0.5);color:#c06060;" onclick="confirmResetAchievements()">⚠ Reset Achievements</button>
+            <span class="ach-save-msg" id="ach-save-msg"></span>
         </div>
         <div class="deco-rule" style="margin-top:10px"></div>
         <button class="btn" onclick="playSfx('menuClick'); toggle('menu-achievements', false)">Close</button>
@@ -2822,12 +2822,16 @@
                         <input type="checkbox" id="opt-discord-rpc" checked>
                         Discord RPC
                     </label>
-                    <label class="settings-check" style="margin-top:4px;">
+                    <div style="font-size:9px; color:#7a5a30; margin-top:1px; margin-bottom:4px; padding-left:20px;" id="discord-rpc-hint">Shows game status on Discord</div>
+                    <label class="settings-check" style="margin-top:2px;">
                         <input type="checkbox" id="opt-update-log" checked>
                         Show Update Log
                     </label>
+                    <label class="settings-check" style="margin-top:4px;">
+                        <input type="checkbox" id="opt-skip-intro" onchange="saveSettings()">
+                        Skip Intro on Launch
+                    </label>
                 </div>
-                <div style="font-size:9px; color:#7a5a30; margin-top:2px;" id="discord-rpc-hint">Shows game status on Discord</div>
             </div>
 
             <!-- COL 3: Gameplay -->
@@ -3969,6 +3973,11 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Load all saved settings unconditionally on boot
+window.addEventListener('DOMContentLoaded', function() {
+    if (typeof loadSettings === 'function') loadSettings();
+});
+
 function saveSettings() {
     try {
         const s = {
@@ -3996,9 +4005,11 @@ function saveSettings() {
             graphicsQuality: _graphicsQuality,
             cardDark: _cardDark,
             updateLog: document.getElementById('opt-update-log')?.checked ?? true,
+            skipIntro: document.getElementById('opt-skip-intro')?.checked ?? false,
             theme: _currentTheme,
 };
         localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+        localStorage.setItem('dr_skip_intro', s.skipIntro ? 'true' : 'false');
     } catch(e) {}
 }
 
@@ -4083,6 +4094,11 @@ if (s.updateLog != null) {
             const el = document.getElementById('opt-update-log');
             if (el) el.checked = s.updateLog;
             applyUpdateLog(s.updateLog);
+        }
+        if (s.skipIntro != null) {
+            const el = document.getElementById('opt-skip-intro');
+            if (el) el.checked = s.skipIntro;
+            localStorage.setItem('dr_skip_intro', s.skipIntro ? 'true' : 'false');
         }
 
     } catch(e) {}
@@ -5172,6 +5188,7 @@ document.getElementById('mute-btn').addEventListener('click', toggleMute);
 
 // Start menu music on first user interaction (browser autoplay policy)
 function _bootMenuMusic() {
+    if (window._introMusicSuppressed) return; // intro is still showing
     document.removeEventListener('pointerdown', _bootMenuMusic);
     document.removeEventListener('keydown', _bootMenuMusic);
     if (_menuMusicNodes || _musicNodes) return; // already started
@@ -7696,8 +7713,7 @@ function saveAchievements() {
             _battleCardsUsed: [...achStats._battleCardsUsed]
         }));
         const msg = document.getElementById('ach-save-msg');
-        msg.style.opacity = '1';
-        setTimeout(() => msg.style.opacity = '0', 1800);
+        if (msg) { msg.style.opacity = '1'; setTimeout(() => msg.style.opacity = '0', 1800); }
     } catch(e) { console.warn('Save failed', e); }
 }
 
@@ -7714,8 +7730,25 @@ function loadAchievements() {
     } catch(e) {}
 }
 
+function confirmResetAchievements() {
+    document.getElementById('ach-reset-modal').classList.add('open');
+}
+
+function doResetAchievements() {
+    document.getElementById('ach-reset-modal').classList.remove('open');
+    unlockedAchs = new Set();
+    achStats = { wins:0,losses:0,totalGames:0,winStreak:0,lossStreak:0,maxWinStreak:0,totalCrits:0,totalFails:0,totalSelfFails:0,totalHealedHP:0,totalDamageDealt:0,totalTariffBlocked:0,cardCounts:{},deckWins:{},vampireUses:0,plagueUses:0,petUses:0,mirrorTriggers:0,tariffUses:0,bombUses:0,stormUses:0,snipeUses:0,infernoUses:0,frostUses:0,soulUses:0,leechUses:0,regenUses:0,curseUses:0,goldUses:0,boneUses:0,shieldUses:0,attackUses:0,healUses:0,_battleCrits:0,_battleFails:0,_battleAiFails:0,_battleTurns:0,_battleDmgDealt:0,_battleSameCard:{},_battleCardsUsed:new Set(),_battleLowestHP:75,_failsThisBattle:0,_wonWithFreeze:false };
+    try {
+        localStorage.removeItem(ACH_KEY);
+        localStorage.removeItem(STATS_KEY);
+    } catch(e) {}
+    saveAchievements();
+    renderAchGrid('all');
+    const msg = document.getElementById('ach-save-msg');
+    if (msg) { msg.textContent = 'Reset!'; msg.style.opacity = '1'; setTimeout(() => { msg.style.opacity = '0'; msg.textContent = ''; }, 2500); }
+}
+
 function resetAchievements() {
-    if (!confirm('Reset ALL achievements and stats? This cannot be undone.')) return;
     unlockedAchs = new Set();
     achStats = { wins:0,losses:0,totalGames:0,winStreak:0,lossStreak:0,maxWinStreak:0,totalCrits:0,totalFails:0,totalSelfFails:0,totalHealedHP:0,totalDamageDealt:0,totalTariffBlocked:0,cardCounts:{},deckWins:{},vampireUses:0,plagueUses:0,petUses:0,mirrorTriggers:0,tariffUses:0,bombUses:0,stormUses:0,snipeUses:0,infernoUses:0,frostUses:0,soulUses:0,leechUses:0,regenUses:0,curseUses:0,goldUses:0,boneUses:0,shieldUses:0,attackUses:0,healUses:0,_battleCrits:0,_battleFails:0,_battleAiFails:0,_battleTurns:0,_battleDmgDealt:0,_battleSameCard:{},_battleCardsUsed:new Set(),_battleLowestHP:75,_failsThisBattle:0,_wonWithFreeze:false };
     saveAchievements();
@@ -8345,12 +8378,23 @@ function updateHUD() {
     // Works in Electron (via electronAPI), standalone browser (window.close),
     // and gracefully does nothing if neither is available.
     window.quitGame = function () {
+        // Clear Discord Rich Presence before closing so it doesn't linger
+        if (window.electronAPI && window.electronAPI.updatePresence) {
+            try { window.electronAPI.updatePresence({ screen: 'clear' }); } catch(e) {}
+        }
         if (window.electronAPI && window.electronAPI.quit) {
             window.electronAPI.quit();
         } else {
             window.close();
         }
     };
+
+    // Safety net: also clear RPC if the window is closed via OS (X button, Alt+F4, etc.)
+    window.addEventListener('beforeunload', function () {
+        if (window.electronAPI && window.electronAPI.updatePresence) {
+            try { window.electronAPI.updatePresence({ screen: 'clear' }); } catch(e) {}
+        }
+    });
 
     // ── AudioContext unlock on first interaction ─────────────────────────────
     // Electron's Chromium still requires a user gesture to start audio.
@@ -8435,6 +8479,11 @@ function updateHUD() {
 // ── CHANGELOG ────────────────────────────────────────────────────────────────
 // Add new entries to the TOP of this array. Each entry shows on the main menu.
 const CHANGELOG = [
+    {
+        version: 'v0.5.4',
+        name: 'Intro + Achievement Reset Update',
+        desc: 'New intro at the start of the game, can be disabled in settings. Achievements can now be reset (wipes local storage). Fixed Discord Rich Presence not clearing when the game is closed.'
+    },
     {
         version: 'v0.5.3',
         name: 'Color Customization',
@@ -8524,6 +8573,255 @@ const CHANGELOG = [
     };
 
     console.log('[Mods] Persistence hooks loaded ✓');
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INTRO SEQUENCE — SunCast Studio
+     ═══════════════════════════════════════════════════════════ -->
+<style>
+    #intro-overlay {
+        position: fixed; inset: 0; z-index: 99999;
+        background: #000;
+        font-family: 'Cinzel', serif;
+        cursor: pointer;
+    }
+    .intro-stage {
+        position: absolute; inset: 0;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        opacity: 0; transition: opacity 0.85s ease;
+        padding: 70px; text-align: center;
+    }
+    .intro-label {
+        font-size: 10px; letter-spacing: 0.3em;
+        color: var(--intro-dim, #7a6040);
+        text-transform: uppercase; margin-bottom: 16px;
+        font-family: 'Cinzel', serif;
+    }
+    .intro-title {
+        font-size: 22px; letter-spacing: 0.32em;
+        color: var(--intro-bright, #e8c87a);
+        text-transform: uppercase; font-weight: 700;
+        font-family: 'Cinzel', serif;
+    }
+    .intro-body {
+        font-family: 'Cinzel', serif;
+        font-size: 13px; line-height: 2.1; max-width: 620px;
+        color: var(--intro-mid, #c8a460);
+        font-weight: 400;
+    }
+    .intro-divider {
+        width: 100px; height: 1px; margin: 22px 0;
+        background: var(--intro-rule, rgba(200,164,96,0.2));
+    }
+    .intro-tech {
+        display: flex; gap: 18px; align-items: center; margin-top: 4px;
+    }
+    .intro-tech span {
+        font-size: 11px; letter-spacing: 0.22em;
+        color: var(--intro-bright, #e8c87a);
+        text-transform: uppercase;
+        font-family: 'Cinzel', serif;
+    }
+    .intro-tech-sep { color: var(--intro-sep, #3a2a14); font-size: 14px; }
+    #intro-hint {
+        position: absolute; bottom: 46px;
+        font-size: 9px; letter-spacing: 0.22em;
+        color: var(--intro-dim, #4a3820);
+        text-transform: uppercase;
+        transition: opacity 0.5s;
+        font-family: 'Cinzel', serif;
+    }
+
+    /* Theme colour overrides for the intro */
+    body.theme-blood  { --intro-bright:#ffb0b0; --intro-mid:#d08080; --intro-dim:#7a3030; --intro-rule:rgba(180,30,30,0.25); --intro-sep:#4a1010; }
+    body.theme-arcane { --intro-bright:#e8b0ff; --intro-mid:#c090e0; --intro-dim:#6a3a8a; --intro-rule:rgba(160,60,240,0.2); --intro-sep:#3a1050; }
+    body.theme-ocean  { --intro-bright:#a0d8ff; --intro-mid:#80c0e0; --intro-dim:#305080; --intro-rule:rgba(40,130,220,0.2); --intro-sep:#102040; }
+    body.theme-forest { --intro-bright:#b0e090; --intro-mid:#80b060; --intro-dim:#406030; --intro-rule:rgba(60,160,40,0.2); --intro-sep:#1a3010; }
+    body.theme-ash    { --intro-bright:#cccccc; --intro-mid:#aaaaaa; --intro-dim:#666666; --intro-rule:rgba(140,140,140,0.2); --intro-sep:#333333; }
+    body.theme-gold   { --intro-bright:#ffe090; --intro-mid:#e0c060; --intro-dim:#806020; --intro-rule:rgba(200,150,0,0.25); --intro-sep:#3a2a00; }
+    body.theme-ice    { --intro-bright:#c0e8ff; --intro-mid:#90c8e0; --intro-dim:#3080a0; --intro-rule:rgba(30,140,200,0.2); --intro-sep:#103050; }
+
+    /* Custom reset confirmation modal */
+    #ach-reset-modal {
+        display: none;
+        position: fixed; inset: 0; z-index: 99998;
+        background: rgba(0,0,0,0.82);
+        justify-content: center; align-items: center;
+        font-family: 'Cinzel', serif;
+    }
+    #ach-reset-modal.open { display: flex; }
+    #ach-reset-box {
+        background: linear-gradient(160deg, #1a0a02 0%, #0d0400 100%);
+        border: 1px solid rgba(139,0,0,0.5);
+        border-radius: 10px;
+        padding: 36px 44px;
+        max-width: 420px;
+        text-align: center;
+        box-shadow: 0 0 60px rgba(0,0,0,0.9);
+    }
+    #ach-reset-box .modal-icon { font-size: 28px; margin-bottom: 14px; }
+    #ach-reset-box .modal-title {
+        font-size: 13px; letter-spacing: 0.25em; color: #e8c87a;
+        text-transform: uppercase; margin-bottom: 16px; font-weight: 700;
+    }
+    #ach-reset-box .modal-body {
+        font-size: 11px; line-height: 1.9; color: #a07040;
+        margin-bottom: 26px;
+    }
+    #ach-reset-box .modal-btns { display: flex; gap: 12px; justify-content: center; }
+    #ach-reset-box .modal-btn-cancel {
+        padding: 8px 24px; font-size: 10px; letter-spacing: 0.18em;
+        border: 1px solid rgba(120,80,20,0.4); border-radius: 5px;
+        background: rgba(20,10,2,0.8); color: #a07840; cursor: pointer;
+        font-family: 'Cinzel', serif; text-transform: uppercase;
+    }
+    #ach-reset-box .modal-btn-confirm {
+        padding: 8px 24px; font-size: 10px; letter-spacing: 0.18em;
+        border: 1px solid rgba(139,0,0,0.6); border-radius: 5px;
+        background: rgba(40,0,0,0.8); color: #c06060; cursor: pointer;
+        font-family: 'Cinzel', serif; text-transform: uppercase;
+    }
+    #ach-reset-box .modal-btn-cancel:hover { color: #e0c080; border-color: rgba(180,130,40,0.6); }
+    #ach-reset-box .modal-btn-confirm:hover { color: #ff9090; border-color: rgba(200,0,0,0.7); }
+</style>
+
+<!-- Custom Achievement Reset Modal -->
+<div id="ach-reset-modal">
+    <div id="ach-reset-box">
+        <div class="modal-icon">⚠</div>
+        <div class="modal-title">Reset Achievements?</div>
+        <div class="modal-body">
+            This will permanently wipe all achievement progress<br>and stat history from local storage.<br><br>
+            <strong style="color:#c06060;">This cannot be undone.</strong>
+        </div>
+        <div class="modal-btns">
+            <button class="modal-btn-cancel" onclick="document.getElementById('ach-reset-modal').classList.remove('open')">Cancel</button>
+            <button class="modal-btn-confirm" onclick="doResetAchievements()">Reset Everything</button>
+        </div>
+    </div>
+</div>
+
+<div id="intro-overlay">
+
+    <!-- Stage 1: Publisher -->
+    <div class="intro-stage" id="intro-s1">
+        <div class="intro-label">Published by</div>
+        <div class="intro-title">SunCast Studio</div>
+    </div>
+
+    <!-- Stage 2: About -->
+    <div class="intro-stage" id="intro-s2">
+        <div class="intro-divider"></div>
+        <p class="intro-body">
+            Damage Roll is an HTML game created by r3ctrr under SunCast Studio.<br>
+            This game is provided "as is" and may have small quirks.<br>
+            All gameplay, assets, and systems belong to SunCast Studio.
+        </p>
+        <div class="intro-divider"></div>
+    </div>
+
+    <!-- Stage 3: Content Creator Notice -->
+    <div class="intro-stage" id="intro-s3">
+        <div class="intro-label">Content Creator Notice</div>
+        <p class="intro-body">
+            Showing, streaming, or making content with the game is fully allowed and encouraged.
+            Just credit the game name so people can find it.<br><br>
+            Damage Roll is built with HTML, CSS, and JavaScript, so some setups may see lag or
+            frame drops when recording or streaming through OBS Portable.
+            This is normal for browser-based games under capture.
+        </p>
+    </div>
+
+    <!-- Stage 4: Made With -->
+    <div class="intro-stage" id="intro-s4">
+        <div class="intro-label">Made with the help of</div>
+        <div class="intro-tech">
+            <span>HTML</span><span class="intro-tech-sep">|</span>
+            <span>CSS</span><span class="intro-tech-sep">|</span>
+            <span>JS</span><span class="intro-tech-sep">|</span>
+            <span>Electron</span><span class="intro-tech-sep">|</span>
+            <span>GitHub</span>
+        </div>
+    </div>
+
+    <div id="intro-hint">Click anywhere to skip</div>
+</div>
+
+<script>
+(function () {
+    // Check if user has disabled the intro
+    if (localStorage.getItem('dr_skip_intro') === 'true') {
+        const ov = document.getElementById('intro-overlay');
+        if (ov) ov.remove();
+        return;
+    }
+
+    // Suppress music boot until intro is done
+    window._introMusicSuppressed = true;
+
+    const overlay = document.getElementById('intro-overlay');
+    const stages  = [
+        document.getElementById('intro-s1'),
+        document.getElementById('intro-s2'),
+        document.getElementById('intro-s3'),
+        document.getElementById('intro-s4'),
+    ];
+    const hint = document.getElementById('intro-hint');
+    const DURATIONS = [2800, 7000, 9000, 3500];
+
+    let current = 0;
+    let autoTimer = null;
+    let transitioning = false;
+
+    function releaseMusic() {
+        window._introMusicSuppressed = false;
+        try { if (typeof startMenuAudio === 'function') startMenuAudio(); } catch(e) {}
+    }
+
+    function dismiss() {
+        clearTimeout(autoTimer);
+        overlay.style.transition = 'opacity 0.85s ease';
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.remove();
+            releaseMusic();
+        }, 900);
+    }
+
+    function nextStage() {
+        if (transitioning) return;
+        transitioning = true;
+        clearTimeout(autoTimer);
+
+        stages[current].style.opacity = '0';
+        current++;
+
+        if (current >= stages.length) {
+            hint.style.opacity = '0';
+            setTimeout(dismiss, 600);
+            return;
+        }
+
+        setTimeout(() => {
+            stages[current].style.opacity = '1';
+            transitioning = false;
+            if (current === stages.length - 1) hint.textContent = 'Click anywhere to continue';
+            autoTimer = setTimeout(nextStage, DURATIONS[current]);
+        }, 850);
+    }
+
+    overlay.addEventListener('click', () => {
+        if (current >= stages.length - 1) { dismiss(); return; }
+        nextStage();
+    });
+
+    setTimeout(() => {
+        stages[0].style.opacity = '1';
+        transitioning = false;
+        autoTimer = setTimeout(nextStage, DURATIONS[0]);
+    }, 350);
 })();
 </script>
 
@@ -8631,10 +8929,6 @@ const CHANGELOG = [
             sendPresence('screen-game');
         }
     };
-
-    window.addEventListener('DOMContentLoaded', () => {
-        if (typeof loadSettings === 'function') loadSettings();
-    });
 
     window.addEventListener('DOMContentLoaded', () => {
         const checkbox = document.getElementById('opt-discord-rpc');
