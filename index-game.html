@@ -148,9 +148,7 @@
             justify-content: flex-start;
         }
 
-        /* ═══════════════════════════
-           MAIN MENU - OVERHAULED
-        ═══════════════════════════ */
+        
         #menu-main {
             background: none;
             overflow: hidden;
@@ -166,7 +164,7 @@
             border-radius: 17px;
         }
 
-        /* Animated rune grid */
+        
         #rune-grid {
             position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden;
         }
@@ -182,7 +180,7 @@
             50% { opacity: 1; transform: scale(1.1); }
         }
 
-        /* Decorative frame lines */
+        
         #menu-frame {
             position: absolute; inset: 20px; z-index: 2; pointer-events: none;
             border: 1px solid rgba(120,80,20,0.2);
@@ -204,7 +202,7 @@
         .menu-corner.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; border-radius: 0 0 0 10px; }
         .menu-corner.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; border-radius: 0 0 10px 0; }
 
-        /* Sigil / emblem behind title */
+        
         #title-sigil {
             position: absolute; z-index: 3;
             width: 320px; height: 320px;
@@ -270,7 +268,7 @@
             color: rgba(200,150,50,0.7);
         }
 
-        /* Horizontal sword divider */
+        
         .sword-divider {
             display: flex; align-items: center; gap: 12px;
             margin: 16px 0; width: 340px;
@@ -287,7 +285,7 @@
             filter: drop-shadow(0 0 6px rgba(255,180,0,0.5));
         }
 
-        /* Button group */
+        
         .btn-group {
             display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 40px;
         }
@@ -348,7 +346,7 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.9), 0 0 30px rgba(200,140,0,0.35);
         }
 
-        /* DeadButton Games credit + socials */
+        
         #studio-credit {
             position: absolute; bottom: 4px; right: 18px;
             text-align: right; z-index: 10;
@@ -381,7 +379,7 @@
             fill: currentColor;
         }
 
-        /* Candlelight pools at bottom corners */
+        
         .candle-glow {
             position: absolute; z-index: 2; pointer-events: none;
             width: 200px; height: 200px; border-radius: 50%;
@@ -395,9 +393,7 @@
             66% { opacity: 0.5; transform: scale(0.9); }
         }
 
-        /* ═══════════════════════════
-           CHANGELOG PANEL
-        ═══════════════════════════ */
+        
         #changelog-panel {
             position: fixed;
             left: calc(50% - 550px - 250px);
@@ -418,7 +414,7 @@
                 inset 0 1px 0 rgba(255,200,80,0.07);
             overflow: visible;
         }
-        /* Title bar */
+        
         #changelog-panel .cl-titlebar {
             flex-shrink: 0;
             display: flex; align-items: center; justify-content: space-between;
@@ -439,7 +435,7 @@
             background: rgba(120,80,30,0.5);
             border: 1px solid rgba(160,110,40,0.3);
         }
-        /* Scrollable body */
+        
         #changelog-body {
             flex: 1;
             overflow-y: auto;
@@ -452,7 +448,7 @@
         #changelog-body::-webkit-scrollbar-track { background: rgba(20,10,2,0.6); }
         #changelog-body::-webkit-scrollbar-thumb { background: rgba(160,110,40,0.4); border-radius: 3px; }
         #changelog-body::-webkit-scrollbar-thumb:hover { background: rgba(200,150,60,0.6); }
-        /* Fade at bottom to hint scrollability */
+        
         #changelog-panel::after {
             content: '';
             position: absolute; bottom: 0; left: 0; right: 0;
@@ -485,9 +481,7 @@
             color: rgba(200,170,110,0.6);
         }
 
-        /* ═══════════════════════════
-           HUD
-        ═══════════════════════════ */
+        
         .hud {
             position: absolute; padding: 14px 16px; width: 230px;
             z-index: 10; border-radius: 8px;
@@ -545,9 +539,7 @@
             display: flex; align-items: center; justify-content: center; font-size: 10px;
         }
 
-        /* ═══════════════════════════
-           CARDS
-        ═══════════════════════════ */
+        
         .hand {
             position: absolute; bottom: 16px; left: 50%;
             transform: translateX(-50%);
@@ -601,7 +593,7 @@
         .c-icon { font-size: 42px; text-align: center; margin: 5px 0 3px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6)); }
         .c-desc { font-family: 'IM Fell English', serif; font-size: 10px; font-style: italic; line-height: 1.45; flex-grow: 1; color: #1e0e04; font-weight: 400; letter-spacing: 0.1px; }
 
-        /* ── Achievements ── */
+        
         #menu-achievements {
             background: radial-gradient(ellipse at 50% 20%, rgba(60,35,5,0.98) 0%, rgba(5,2,0,0.99) 100%);
         }
@@ -635,7 +627,7 @@
         }
         .ach-filter.active, .ach-filter:hover { border-color: #b8860b; color: #e8c87a; }
 
-        /* Grid: 2 columns, scrollable */
+        
         .ach-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -650,20 +642,20 @@
         .ach-grid::-webkit-scrollbar-track { background: transparent; }
         .ach-grid::-webkit-scrollbar-thumb { background: rgba(180,130,40,0.3); border-radius: 2px; }
 
-        /* Tile: collapsed by default, expands on hover */
+        
         .ach-tile {
             background: linear-gradient(160deg, rgba(25,12,3,0.96), rgba(8,4,0,0.98));
             border: 1px solid rgba(80,50,15,0.4); border-radius: 7px;
             padding: 8px 12px;
             position: relative; overflow: hidden;
             cursor: default;
-            /* Fixed collapsed height */
+            
             min-height: 48px;
             max-height: 48px;
             transition: max-height 0.28s ease, border-color 0.2s, box-shadow 0.2s, background 0.2s;
             display: flex; align-items: center; gap: 10px;
         }
-        /* Expanded on hover */
+        
         .ach-tile:hover {
             max-height: 130px;
             border-color: rgba(140,100,30,0.7);
@@ -688,7 +680,7 @@
             filter: blur(3px); user-select: none;
         }
 
-        /* Icon: always visible */
+        
         .ach-tile-icon {
             font-size: 20px; flex-shrink: 0;
             filter: grayscale(1) opacity(0.25);
@@ -697,12 +689,12 @@
         }
         .ach-tile.unlocked .ach-tile-icon { filter: none; }
 
-        /* Text container */
+        
         .ach-tile-body {
             display: flex; flex-direction: column; overflow: hidden; flex: 1; min-width: 0;
         }
 
-        /* Name: always visible, readable */
+        
         .ach-tile-name {
             font-family: 'Cinzel', serif;
             font-size: 10px; font-weight: 700;
@@ -712,7 +704,7 @@
         }
         .ach-tile.unlocked .ach-tile-name { color: #dbb870; }
 
-        /* Rarity badge inline with name */
+        
         .ach-tile-rarity {
             font-family: 'Cinzel', serif; font-size: 7px; letter-spacing: 2px;
             text-transform: uppercase; opacity: 0.7; margin-top: 1px;
@@ -724,7 +716,7 @@
         .ach-tile[data-rarity="epic"]      .ach-tile-rarity { color: #ba68c8; }
         .ach-tile[data-rarity="legendary"] .ach-tile-rarity { color: #ffd700; }
 
-        /* Description: hidden until hover expands tile */
+        
         .ach-tile-desc {
             font-family: 'Cinzel', serif;
             font-size: 9.5px; font-weight: 400;
@@ -737,7 +729,7 @@
         .ach-tile:hover .ach-tile-desc { opacity: 1; }
         .ach-tile.unlocked .ach-tile-desc { color: #906f3a; }
 
-        /* Gold check mark */
+        
         .ach-tile-check {
             position: absolute; top: 7px; right: 9px;
             font-size: 10px; color: #ffd700; display: none;
@@ -752,7 +744,7 @@
             color: #6b8a3a; opacity: 0; transition: opacity 0.3s; text-transform: uppercase;
         }
 
-        /* Toast */
+        
         #ach-toast {
             position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
             z-index: 5000; pointer-events: none; opacity: 0;
@@ -776,7 +768,7 @@
         .credits-body .credit-role { color: #a07840; font-size: 12px; }
         .credits-body .credit-note { color: #6b4f2a; font-size: 11px; font-style: italic; }
 
-        /* ── Custom Deck Builder ── */
+        
         #menu-custom-deck {
             overflow-y: auto;
             justify-content: flex-start;
@@ -813,7 +805,7 @@
         .cdb-input::placeholder { color: rgba(120,90,40,0.5); }
         textarea.cdb-input { resize: none; height: 64px; line-height: 1.5; }
 
-        /* Card picker grid */
+        
         .card-picker-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
             gap: 7px; flex: 1;
@@ -854,7 +846,7 @@
         .picker-card-rarity.epic      { color: #ab47bc; }
         .picker-card-rarity.legendary { color: #f9a825; }
 
-        /* Deck preview panel */
+        
         .deck-preview-panel {
             background: linear-gradient(160deg, rgba(20,10,2,0.95), rgba(6,3,0,0.97));
             border: 1px solid rgba(90,55,15,0.5); border-radius: 8px;
@@ -899,7 +891,7 @@
             min-height: 16px; padding: 2px 0;
         }
 
-        /* Logo picker */
+        
         .logo-picker-grid {
             display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px;
         }
@@ -924,7 +916,7 @@
         .cdb-btn-row .btn {
             min-width: 0; padding: 9px 22px; font-size: 11px;
         }
-        /* Custom deck action buttons */
+        
         .deck-custom-actions {
             position: absolute; bottom: 7px; right: 8px;
             display: flex; gap: 4px; align-items: center;
@@ -941,7 +933,7 @@
         .deck-action-btn.share:hover { color: rgba(80,180,220,0.95); background: rgba(0,100,150,0.12); }
         .deck-action-btn.del   { color: rgba(160,50,30,0.5); }
         .deck-action-btn.del:hover   { color: rgba(220,60,30,0.95); background: rgba(180,30,10,0.12); }
-        /* Inline share popup on deck card */
+        
         .deck-share-popup {
             display: none; margin-top: 8px; padding: 7px 8px;
             background: rgba(5,2,0,0.85); border: 1px solid rgba(80,50,15,0.4);
@@ -972,7 +964,7 @@
             min-height: 12px;
         }
 
-        /* ── Settings ── */
+        
         .settings-grid {
             display: flex; gap: 24px; width: 100%; max-width: 660px; flex-wrap: wrap;
         }
@@ -1002,7 +994,7 @@
             cursor: pointer; display: flex; align-items: center; gap: 5px; letter-spacing: 0.3px;
         }
         .settings-check input[type="checkbox"] { cursor: pointer; accent-color: #b8860b; }
-        /* styled select for track dropdowns */
+        
         .settings-select {
             flex: 1; background: rgba(15,7,0,0.92);
             border: 1px solid rgba(140,95,25,0.6); border-radius: 3px;
@@ -1031,7 +1023,7 @@
             box-shadow: 0 0 8px rgba(180,130,0,0.2);
         }
 
-        /* custom music url input — uses a class so themes can override inline styles */
+        
         .custom-music-input {
             flex: 1;
             background: rgba(10,5,0,0.85);
@@ -1047,8 +1039,8 @@
         }
         .custom-music-input::placeholder { color: rgba(120,90,40,0.5); }
 
-        /* ── Decks ── */
-        /* Deck screen scroll */
+        
+        
         #menu-decks {
             justify-content: flex-start;
             padding: 20px 24px 16px;
@@ -1057,7 +1049,7 @@
             flex: 1; overflow-y: auto; width: 100%; max-width: 660px;
             min-height: 0;
             padding-right: 4px;
-            /* custom scrollbar */
+            
             scrollbar-width: thin;
             scrollbar-color: rgba(180,130,40,0.4) rgba(20,10,2,0.6);
         }
@@ -1073,7 +1065,7 @@
             font-family: 'IM Fell English', serif; font-size: 11px; font-style: italic;
             color: #6b9a40; opacity: 0; transition: opacity 0.3s;
         }
-        /* Load deck panel */
+        
         .load-deck-inner {
             background: rgba(10,5,0,0.9); border: 1px solid rgba(120,80,30,0.5);
             border-radius: 6px; padding: 10px 14px;
@@ -1165,9 +1157,7 @@
         .ai-back::before { content: '✦'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(180,130,40,0.18); font-size: 28px; }
         .ai-back::after  { content: ''; position: absolute; inset: 6px; border: 1px solid rgba(120,80,30,0.2); border-radius: 4px; }
 
-        /* ═══════════════════════════
-           3D DICE
-        ═══════════════════════════ */
+        
         #die-box {
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%) scale(0);
@@ -1218,7 +1208,7 @@
             pointer-events: none;
         }
 
-        /* Face rotations for a cube */
+        
         .face-front  { transform: translateZ(60px); }
         .face-back   { transform: rotateY(180deg) translateZ(60px); }
         .face-right  { transform: rotateY(90deg) translateZ(60px); }
@@ -1254,7 +1244,7 @@
             color: #ff4040;
         }
 
-        /* Result label under die */
+        
         #die-result-label {
             position: absolute; top: 130px; left: 50%; transform: translateX(-50%);
             font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 3px;
@@ -1401,7 +1391,7 @@
         #zone-player { bottom: 200px; }
         .zone-art { font-size: 90px; opacity: 0.04; filter: blur(2px) grayscale(1); }
 
-        /* Mute button */
+        
         #mute-btn {
             position: absolute; top: 14px; left: 18px; z-index: 100;
             background: rgba(30,15,5,0.85); border: 1px solid rgba(120,80,30,0.5);
@@ -1428,7 +1418,7 @@
         }
         #forfeit-btn.visible { display: flex; }
 
-        /* Forfeit confirmation popup */
+        
         #forfeit-popup {
             position: absolute; inset: 0; z-index: 5000;
             display: none; align-items: center; justify-content: center;
@@ -1494,7 +1484,7 @@
             border-color: rgba(180,130,40,0.8); color: #ffe088;
         }
 
-        /* Crit screen flash ring */
+        
         .crit-ring {
             position: absolute; inset: 0; pointer-events: none; z-index: 3999;
             border-radius: 17px;
@@ -1507,22 +1497,20 @@
         }
     </style>
     <style id="rarity-glow-style">
-        /* Rarity glow — can be disabled via Settings */
+        
         .card[data-rarity="uncommon"]  { border-color: rgba(40,120,40,0.8);  box-shadow: 0 8px 24px rgba(0,0,0,0.8), 0 0 12px rgba(40,180,40,0.25) !important; }
         .card[data-rarity="rare"]      { border-color: rgba(30,90,200,0.8);  box-shadow: 0 8px 24px rgba(0,0,0,0.8), 0 0 16px rgba(30,90,255,0.35) !important; }
         .card[data-rarity="epic"]      { border-color: rgba(120,30,180,0.8); box-shadow: 0 8px 24px rgba(0,0,0,0.8), 0 0 20px rgba(140,0,220,0.4) !important; }
         .card[data-rarity="legendary"] { border-color: rgba(200,160,0,0.9);  box-shadow: 0 8px 24px rgba(0,0,0,0.8), 0 0 24px rgba(255,180,0,0.5) !important; animation: leg-shimmer 2s ease-in-out infinite !important; }
     </style>
     <style id="graphics-quality-style">
-        /* ── Card darkness CSS variable (set by slider) ── */
+        
         :root { --card-dark: 0; }
 
-        /* ── Card darkening overlay via brightness filter ── */
+        
         .card { filter: brightness(calc(1 - var(--card-dark) * 0.004)); }
 
-        /* ═══════════════════════════════════════════════
-           LOW  — strip everything, pure gradients only
-        ═══════════════════════════════════════════════ */
+        
         body.gfx-low .rune-cell,
         body.gfx-low #menu-main h1,
         body.gfx-low .btn::after,
@@ -1538,7 +1526,7 @@
                 radial-gradient(ellipse at 50% 0%, #d9c490 0%, #b08040 50%, #7a5020 100%) !important;
         }
 
-        /* CUT 1: Flatten all screen backgrounds — no expensive multi-radial gradients */
+        
         body.gfx-low .screen {
             background: #0a0400 !important;
         }
@@ -1546,7 +1534,7 @@
             background: #0a0400 !important;
         }
 
-        /* CUT 2: Strip all card box-shadows — flat cards, no glow, no depth */
+        
         body.gfx-low .card,
         body.gfx-low .card[data-rarity="uncommon"],
         body.gfx-low .card[data-rarity="rare"],
@@ -1555,13 +1543,13 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.6) !important;
         }
 
-        /* CUT 3: No rarity glow at all — border only, no colored box-shadow bloom */
+        
         body.gfx-low .card[data-rarity="uncommon"]  { border-color: rgba(50,160,60,0.7) !important; }
         body.gfx-low .card[data-rarity="rare"]      { border-color: rgba(40,110,230,0.7) !important; }
         body.gfx-low .card[data-rarity="epic"]      { border-color: rgba(150,40,210,0.7) !important; }
         body.gfx-low .card[data-rarity="legendary"] { border-color: rgba(220,180,0,0.8) !important; animation: none !important; }
 
-        /* CUT 4: Strip HUD box-shadows and inner glows — flat panels */
+        
         body.gfx-low .hud {
             box-shadow: none !important;
             background: rgba(10,5,0,0.95) !important;
@@ -1572,7 +1560,7 @@
         }
         body.gfx-low .hp-fill.low { animation: none !important; }
 
-        /* CUT 5: No button hover shimmer, glow, or transform — flat interactive elements */
+        
         body.gfx-low .btn,
         body.gfx-low .btn.primary {
             box-shadow: none !important;
@@ -1584,9 +1572,7 @@
         body.gfx-low #turn-indicator { text-shadow: none !important; }
         body.gfx-low #flash-overlay { display: none !important; }
 
-        /* ═══════════════════════════════════════════════
-           MID — restore base textures (needed when switching back from low)
-        ═══════════════════════════════════════════════ */
+        
         body.gfx-mid .card {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJub2lzZSI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPgogICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIG1vZGU9Im11bHRpcGx5Ii8+CiAgPC9maWx0ZXI+CiAgPGZpbHRlciBpZD0iZ3JhaW4iPgogICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuNTUgIDAgMCAwIDAgMC40MiAgMCAwIDAgMCAwLjIyICAwIDAgMCAwLjE4IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI2dyYWluKSIgb3BhY2l0eT0iMSIvPgo8L3N2Zz4='),
@@ -1601,11 +1587,9 @@
         }
         body.gfx-mid #game-container { box-shadow: 0 0 0 1px #6b3a1f, 0 0 80px rgba(0,0,0,0.95), 0 0 200px rgba(100,30,0,0.4), inset 0 0 200px rgba(0,0,0,0.9); }
 
-        /* ═══════════════════════════════════════════════
-           HIGH — rich layered textures across all surfaces
-        ═══════════════════════════════════════════════ */
+        
 
-        /* ── GAME CONTAINER: dark wood planks + fine grain ── */
+        
         body.gfx-high #game-container::before {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjM1IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
@@ -1616,13 +1600,13 @@
             background: radial-gradient(ellipse at 50% 50%, transparent 25%, rgba(0,0,0,0.78) 100%);
         }
 
-        /* ── ALL MENU SCREENS: wood panel background ── */
+        
         body.gfx-high .screen {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjEyIDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
                 radial-gradient(ellipse at 50% 30%, rgba(55,22,4,0.97) 0%, rgba(5,2,0,0.99) 100%) !important;
         }
-        /* main menu overrides its own bg — texture the inner bg div instead */
+        
         body.gfx-high #menu-bg {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjEyIDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
@@ -1632,7 +1616,7 @@
                 linear-gradient(180deg, #0a0300 0%, #1a0800 30%, #0d0400 60%, #060200 100%);
         }
 
-        /* ── PLAY CARDS: thick parchment + aged paper grain ── */
+        
         body.gfx-high .card {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJub2lzZSI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPgogICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIG1vZGU9Im11bHRpcGx5Ii8+CiAgPC9maWx0ZXI+CiAgPGZpbHRlciBpZD0iZ3JhaW4iPgogICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuNTUgIDAgMCAwIDAgMC40MiAgMCAwIDAgMCAwLjIyICAwIDAgMCAwLjE4IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI2dyYWluKSIgb3BhY2l0eT0iMSIvPgo8L3N2Zz4='),
@@ -1655,7 +1639,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 36px rgba(255,200,0,0.7) !important;
         }
 
-        /* ── AI CARD BACKS: richer wood grain ── */
+        
         body.gfx-high .ai-back {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjM1IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
@@ -1664,7 +1648,7 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.85), inset 0 1px 0 rgba(255,180,0,0.1) !important;
         }
 
-        /* ── HUD PANELS: leather/wood surface ── */
+        
         body.gfx-high .hud {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj4KICA8ZmlsdGVyIGlkPSJsZWF0aCI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC41IiBudW1PY3RhdmVzPSI1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjA2ICAwIDAgMCAwIDAuMDMgIDAgMCAwIDAgMC4wMSAgMCAwIDAgMC4yOCAwIi8+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbGw9InRyYW5zcGFyZW50Ii8+CiAgPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbHRlcj0idXJsKCNsZWF0aCkiIG9wYWNpdHk9IjEiLz4KPC9zdmc+'),
@@ -1682,7 +1666,7 @@
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj4KICA8ZmlsdGVyIGlkPSJhc2YiPgogICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNCIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPgogICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMC4wICAwIDAgMCAwIDAuMCAgMCAwIDAgMCAwLjAgIDAgMCAwIDAuMjIgMCIvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgogIDxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWx0ZXI9InVybCgjYXNmKSIgb3BhY2l0eT0iMSIvPgo8L3N2Zz4='), rgba(0,0,0,0.6) !important;
         }
 
-        /* ── DECK CARDS (deck selection screen) ── */
+        
         body.gfx-high .deck-card {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjM1IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
@@ -1698,7 +1682,7 @@
                 linear-gradient(160deg, rgba(45,22,5,0.98), rgba(14,7,0,0.99)) !important;
         }
 
-        /* ── PICKER CARDS (custom deck builder) ── */
+        
         body.gfx-high .picker-card {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJub2lzZSI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPgogICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIG1vZGU9Im11bHRpcGx5Ii8+CiAgPC9maWx0ZXI+CiAgPGZpbHRlciBpZD0iZ3JhaW4iPgogICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuNTUgIDAgMCAwIDAgMC40MiAgMCAwIDAgMCAwLjIyICAwIDAgMCAwLjE4IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI2dyYWluKSIgb3BhY2l0eT0iMSIvPgo8L3N2Zz4='),
@@ -1711,7 +1695,7 @@
                 linear-gradient(160deg, rgba(48,24,5,0.98), rgba(16,8,0,0.99)) !important;
         }
 
-        /* ── DECK PREVIEW + LOAD DECK PANELS ── */
+        
         body.gfx-high .deck-preview-panel {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj4KICA8ZmlsdGVyIGlkPSJ3b29kIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDggIDAgMCAwIDAgMC4wNCAgMCAwIDAgMCAwLjAxICAwIDAgMCAwLjM1IDAiLz4KICA8L2ZpbHRlcj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI3dvb2QpIiBvcGFjaXR5PSIxIi8+Cjwvc3ZnPg=='),
@@ -1729,7 +1713,7 @@
                 linear-gradient(160deg, rgba(22,10,2,0.97), rgba(7,3,0,0.98)) !important;
         }
 
-        /* ── MAIN MENU BUTTONS ── */
+        
         body.gfx-high .btn {
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJ0ZXgiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjA4ICAwIDAgMCAwIDAuMDQgIDAgMCAwIDAgMC4wMSAgMCAwIDAgMC4zNSAwIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9InRyYW5zcGFyZW50Ii8+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbHRlcj0idXJsKCN0ZXgpIiBvcGFjaXR5PSIxIi8+PC9zdmc+'),
@@ -1753,7 +1737,7 @@
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJwb3AiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxMiAwLjciIG51bU9jdGF2ZXM9IjUiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjA4ICAwIDAgMCAwIDAuMDQgIDAgMCAwIDAgMC4wMSAgMCAwIDAgMC4zNSAwIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9InRyYW5zcGFyZW50Ii8+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbHRlcj0idXJsKCNwb3ApIiBvcGFjaXR5PSIxIi8+PC9zdmc+'),
                 linear-gradient(160deg,rgba(35,15,3,0.98),rgba(10,4,0,0.99)) !important;
-        }        /* ── HIGH GRAPHICS EXCLUSIVE ENHANCEMENTS ── */
+        }        
         body.gfx-high #game-container {
             box-shadow:
                 0 0 0 1px #7a4a10,
@@ -1763,7 +1747,7 @@
                 inset 0 0 250px rgba(0,0,0,0.92) !important;
             filter: contrast(1.04) saturate(1.08);
         }
-        /* Stronger legendary shimmer in high */
+        
         body.gfx-high .card[data-rarity="legendary"] {
             animation: leg-shimmer-high 1.6s ease-in-out infinite !important;
         }
@@ -1771,17 +1755,17 @@
             0%,100% { box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 28px rgba(255,170,0,0.55) !important; }
             50%      { box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 60px rgba(255,220,0,0.95) !important; }
         }
-        /* High: stronger rarity glows */
+        
         body.gfx-high .card[data-rarity="uncommon"] { box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 22px rgba(50,200,60,0.5) !important; }
         body.gfx-high .card[data-rarity="rare"]     { box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 28px rgba(40,110,255,0.6) !important; }
         body.gfx-high .card[data-rarity="epic"]     { box-shadow: 0 10px 30px rgba(0,0,0,0.92), 0 0 32px rgba(160,20,240,0.65) !important; }
-        /* High: glowing HUD borders */
+        
         body.gfx-high .hud {
             box-shadow: 0 8px 32px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,200,80,0.14), 0 0 16px rgba(120,70,10,0.25) !important;
         }
-        /* High: rune grid pops more */
+        
         body.gfx-high .rune-cell { color: rgba(200,150,50,0.13) !important; }
-        /* High: title breathes more dramatically */
+        
         body.gfx-high #menu-main h1 {
             animation: title-breathe-high 2.5s ease-in-out infinite !important;
         }
@@ -1789,10 +1773,9 @@
             0%,100% { filter: drop-shadow(0 0 25px rgba(255,180,0,0.6)) drop-shadow(0 6px 0 rgba(0,0,0,1)); }
             50%      { filter: drop-shadow(0 0 80px rgba(255,215,0,1)) drop-shadow(0 6px 0 rgba(0,0,0,1)); }
         }
-        /* High: ambient firelight flicker on embers canvas */
+        
         body.gfx-high #embers { opacity: 1; }
         body.gfx-mid #embers  { opacity: 0.7; }
-
 
             background:
                 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJ0ZXgiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxNSAwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjE4ICAwIDAgMCAwIDAuMDIgIDAgMCAwIDAgMC4wMiAgMCAwIDAgMC4zOCAwIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9InRyYW5zcGFyZW50Ii8+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbHRlcj0idXJsKCN0ZXgpIiBvcGFjaXR5PSIxIi8+PC9zdmc+'),
@@ -1995,7 +1978,7 @@
                 linear-gradient(160deg,rgba(0,22,46,0.98),rgba(0,10,26,0.99)) !important;
         }
 
-        /* ── THEME SWATCH LABEL FIX ── */
+        
         .theme-swatch-label {
             font-family: 'Cinzel', serif !important;
             font-size: 7.5px; letter-spacing: 1.5px;
@@ -2004,11 +1987,9 @@
             pointer-events: none; position: relative; z-index: 1;
         }
 
-        /* ── THEME: blood ── */
+        
 
-        /* ═══════════════════════════════════════════════════
-           IN-GAME BOARD THEMING — game-container colors per theme
-        ═══════════════════════════════════════════════════ */
+        
         body.theme-blood #game-container {
             border-color: #3a0000 !important;
             box-shadow: 0 0 0 1px #6b0a0a, 0 0 80px rgba(0,0,0,0.95), 0 0 200px rgba(120,0,0,0.4), inset 0 0 200px rgba(0,0,0,0.9) !important;
@@ -2110,7 +2091,7 @@
         body.theme-blood .ai-back::before { color:rgba(200,40,40,0.18) !important; }
         body.theme-blood .ai-back::after { border-color:rgba(120,20,20,0.25) !important; }
 
-        /* ── THEME: arcane ── */
+        
         body.theme-arcane { background:radial-gradient(ellipse at 30% 20%,#1a0030,#070010 40%,#000) !important; }
         body.theme-arcane .screen { background:radial-gradient(ellipse at 50% 30%,rgba(40,5,80,.97),rgba(2,0,10,.99)) !important; }
         body.theme-arcane #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(60,0,120,.9) 0%,transparent 60%),linear-gradient(180deg,#050010,#0d0020 30%,#060012 60%,#020008) !important; }
@@ -2162,7 +2143,7 @@
         body.theme-arcane .ai-back::before { color:rgba(160,80,255,0.18) !important; }
         body.theme-arcane .ai-back::after { border-color:rgba(90,20,160,0.25) !important; }
 
-        /* ── THEME: ocean ── */
+        
         body.theme-ocean { background:radial-gradient(ellipse at 30% 20%,#001840,#000810 40%,#000) !important; }
         body.theme-ocean .screen { background:radial-gradient(ellipse at 50% 30%,rgba(0,20,60,.97),rgba(0,2,10,.99)) !important; }
         body.theme-ocean #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(0,30,100,.9) 0%,transparent 60%),linear-gradient(180deg,#000510,#00091a 30%,#000410 60%,#000208) !important; }
@@ -2214,7 +2195,7 @@
         body.theme-ocean .ai-back::before { color:rgba(40,120,220,0.18) !important; }
         body.theme-ocean .ai-back::after { border-color:rgba(15,70,140,0.25) !important; }
 
-        /* ── THEME: forest ── */
+        
         body.theme-forest { background:radial-gradient(ellipse at 30% 20%,#001800,#000800 40%,#000) !important; }
         body.theme-forest .screen { background:radial-gradient(ellipse at 50% 30%,rgba(5,30,5,.97),rgba(0,5,0,.99)) !important; }
         body.theme-forest #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(0,60,10,.9) 0%,transparent 60%),linear-gradient(180deg,#010800,#020f00 30%,#010600 60%,#000300) !important; }
@@ -2266,7 +2247,7 @@
         body.theme-forest .ai-back::before { color:rgba(60,180,40,0.18) !important; }
         body.theme-forest .ai-back::after { border-color:rgba(20,90,15,0.25) !important; }
 
-        /* ── THEME: ash ── */
+        
         body.theme-ash { background:radial-gradient(ellipse at 30% 20%,#1a1a1a,#080808 40%,#000) !important; }
         body.theme-ash .screen { background:radial-gradient(ellipse at 50% 30%,rgba(25,25,25,.97),rgba(5,5,5,.99)) !important; }
         body.theme-ash #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(50,50,50,.8) 0%,transparent 60%),linear-gradient(180deg,#080808,#111 30%,#0a0a0a 60%,#050505) !important; }
@@ -2318,7 +2299,7 @@
         body.theme-ash .ai-back::before { color:rgba(160,160,160,0.18) !important; }
         body.theme-ash .ai-back::after { border-color:rgba(70,70,70,0.25) !important; }
 
-        /* ── THEME: gold ── */
+        
         body.theme-gold { background:radial-gradient(ellipse at 30% 20%,#2d1a00,#0d0800 40%,#000) !important; }
         body.theme-gold .screen { background:radial-gradient(ellipse at 50% 30%,rgba(50,35,0,.97),rgba(5,3,0,.99)) !important; }
         body.theme-gold #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(100,70,0,.9) 0%,transparent 60%),linear-gradient(180deg,#0f0a00,#1a1000 30%,#0d0800 60%,#060400) !important; }
@@ -2370,7 +2351,7 @@
         body.theme-gold .ai-back::before { color:rgba(220,160,20,0.18) !important; }
         body.theme-gold .ai-back::after { border-color:rgba(130,85,8,0.25) !important; }
 
-        /* ── THEME: ice ── */
+        
         body.theme-ice { background:radial-gradient(ellipse at 30% 20%,#002040,#000e20 40%,#000) !important; }
         body.theme-ice .screen { background:radial-gradient(ellipse at 50% 30%,rgba(5,55,95,.97),rgba(0,10,22,.99)) !important; }
         body.theme-ice #menu-bg { background:radial-gradient(ellipse at 50% 0%,rgba(10,80,140,.85) 0%,transparent 60%),linear-gradient(180deg,#001828,#002238 30%,#001525 60%,#000c18) !important; }
@@ -2427,11 +2408,8 @@
 
 </div>
 
-
-
 <canvas id="embers" width="980" height="670"></canvas>
 
-<!-- CHANGELOG PANEL — lives on body, outside game-container -->
 <div id="changelog-panel">
     <div class="cl-titlebar">
         <span class="cl-titlebar-text">✦ Update Log</span>
@@ -2460,22 +2438,22 @@
     <button id="mute-btn" title="Toggle Sound">🔊</button>
     <button id="forfeit-btn" title="Forfeit match" onclick="forfeit()">🏳</button>
 
-    <!-- MAIN MENU -->
+    
     <div id="menu-main" class="screen">
         <div id="menu-bg"></div>
 
-        <!-- Animated rune background grid -->
+        
         <div id="rune-grid"></div>
 
-        <!-- Rotating sigils -->
+        
         <svg id="title-sigil" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="160" cy="160" r="150" stroke="rgba(180,130,40,0.08)" stroke-width="1"/>
             <circle cx="160" cy="160" r="130" stroke="rgba(180,130,40,0.06)" stroke-width="0.5" stroke-dasharray="4 8"/>
             <polygon points="160,20 291,95 291,245 160,320 29,245 29,95" fill="none" stroke="rgba(180,130,40,0.07)" stroke-width="1"/>
             <polygon points="160,50 265,110 265,230 160,290 55,230 55,110" fill="none" stroke="rgba(180,130,40,0.05)" stroke-width="0.5"/>
-            <!-- 8-pointed star -->
+            
             <path d="M160 30 L170 140 L280 160 L170 180 L160 290 L150 180 L40 160 L150 140 Z" fill="none" stroke="rgba(180,130,40,0.06)" stroke-width="0.8"/>
-            <!-- Rune ticks -->
+            
             <line x1="160" y1="10" x2="160" y2="25" stroke="rgba(180,130,40,0.2)" stroke-width="1.5"/>
             <line x1="160" y1="295" x2="160" y2="310" stroke="rgba(180,130,40,0.2)" stroke-width="1.5"/>
             <line x1="10" y1="160" x2="25" y2="160" stroke="rgba(180,130,40,0.2)" stroke-width="1.5"/>
@@ -2485,13 +2463,13 @@
         <svg id="title-sigil-inner" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="120" cy="120" r="100" stroke="rgba(180,130,40,0.1)" stroke-width="1" stroke-dasharray="2 6"/>
             <circle cx="120" cy="120" r="80" stroke="rgba(180,130,40,0.07)" stroke-width="0.5"/>
-            <!-- Triquetra-like triangles -->
+            
             <polygon points="120,25 205,175 35,175" fill="none" stroke="rgba(180,130,40,0.09)" stroke-width="0.8"/>
             <polygon points="120,215 35,65 205,65" fill="none" stroke="rgba(180,130,40,0.07)" stroke-width="0.8"/>
             <circle cx="120" cy="120" r="20" stroke="rgba(180,130,40,0.15)" stroke-width="1"/>
         </svg>
 
-        <!-- Decorative frame -->
+        
         <div id="menu-frame">
             <div class="menu-corner tl"></div>
             <div class="menu-corner tr"></div>
@@ -2499,7 +2477,7 @@
             <div class="menu-corner br"></div>
         </div>
 
-        <!-- Candle glows -->
+        
         <div class="candle-glow left"></div>
         <div class="candle-glow right"></div>
 
@@ -2531,28 +2509,28 @@
         </div>
 
         <div id="social-bar">
-            <!-- YouTube -->
+            
             <a class="social-btn" href="https://www.youtube.com/@SunCastStudiosYT" target="_blank" title="YouTube">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.8 2 12 2 12 2s-4.8 0-7.3.2c-.6 0-1.9.1-3 1.3C.8 4.3.5 6.2.5 6.2S.2 8.4.2 10.6v2.1c0 2.2.3 4.4.3 4.4s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7 21.2 12 21.2 12 21.2s4.8 0 7.3-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2c0-2.2-.3-4.3-.3-4.3zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"/></svg>
             </a>
-            <!-- X / Twitter -->
+            
             <a class="social-btn" href="https://x.com/r3ctrr313" target="_blank" title="X (Twitter)">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <!-- Reddit -->
-            <!-- Discord -->
+            
+            
             <a class="social-btn" href="https://discord.gg/e2USWdSDKs" target="_blank" title="Discord">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.032.054a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
             </a>
-            <!-- itch.io -->
+            
             <a class="social-btn" href="https://suncast-studios.itch.io" target="_blank" title="itch.io">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.33 0 2.363-1.102 2.363-2.41 0 1.308 1.107 2.41 2.438 2.41h.024c1.33 0 2.438-1.102 2.438-2.41 0 1.308 1.032 2.41 2.362 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.436 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.08-2.99-3.13-3.612C19.948 1.339 3.952 1.339 3.13 1.338zM7 9.773c-.27 0-.54.026-.8.077C6.03 9.91 5.878 9.99 5.72 10.078c0 0-1.45 7.44-1.72 9.544C5.568 21.174 8.51 22.59 12 22.59s6.432-1.416 8-2.968c-.27-2.105-1.72-9.544-1.72-9.544a3.936 3.936 0 0 0-.36-.175A3.89 3.89 0 0 0 17.015 9.773c-.96 0-1.733.41-2.274 1.016-.402-.61-1.057-1.016-1.84-1.016-.784 0-1.44.406-1.84 1.016-.54-.606-1.314-1.016-2.274-1.016H7zm-.395 3.38h.014c.48 0 .87.39.87.87v1.74h1.74c.48 0 .87.39.87.87s-.39.87-.87.87H7.49v1.74c0 .48-.39.87-.87.87a.872.872 0 0 1-.872-.87v-1.74H4.01a.872.872 0 0 1-.872-.87c0-.48.39-.87.87-.87h1.742v-1.74c0-.48.39-.87.87-.87zm9.77.508c.6 0 1.087.487 1.087 1.087s-.487 1.087-1.087 1.087-1.087-.487-1.087-1.087.487-1.087 1.087-1.087zm-2.61 2.174c.6 0 1.087.487 1.087 1.087s-.487 1.087-1.087 1.087-1.087-.487-1.087-1.087.487-1.087 1.087-1.087z"/></svg>
             </a>
         </div>
-        <div id="studio-credit">SunCast Studios · v0.5.4</div>
+        <div id="studio-credit">SunCast Studios · v0.5.5</div>
     </div>
 
-    <!-- ACHIEVEMENTS -->
+    
     <div id="menu-achievements" class="screen" style="display:none;">
         <div class="ach-header">
             <h2 style="margin:0">🏆 Achievements</h2>
@@ -2580,7 +2558,7 @@
         <button class="btn" onclick="playSfx('menuClick'); toggle('menu-achievements', false)">Close</button>
     </div>
 
-    <!-- ACHIEVEMENT TOAST -->
+    
     <div id="ach-toast">
         <div id="ach-toast-icon">🏆</div>
         <div id="ach-toast-text">
@@ -2589,7 +2567,7 @@
         </div>
     </div>
 
-    <!-- CREDITS -->
+    
     <div id="menu-credits" class="screen" style="display:none;">
         <h2>Credits</h2>
         <div class="deco-rule"></div>
@@ -2611,7 +2589,7 @@
         <button class="btn" onclick="playSfx('menuClick'); toggle('menu-credits', false)">Close</button>
     </div>
 
-    <!-- DECKS -->
+    
     <div id="menu-decks" class="screen" style="display:none;">
         <h2 style="margin-bottom:4px;">Choose Deck</h2>
         <div style="font-family:'IM Fell English',serif; font-size:12px; color:#6b4f2a; margin-bottom:10px; font-style:italic;">Both players use the selected deck</div>
@@ -2621,7 +2599,7 @@
         <div class="deck-save-row">
             <span class="deck-save-msg" id="deck-save-msg">Saved!</span>
         </div>
-        <!-- Load deck inline panel -->
+        
         <div id="load-deck-panel" style="display:none; max-width:460px; width:100%; margin:0 auto 4px;">
             <div class="load-deck-inner">
                 <div class="cdb-label" style="margin-bottom:5px;">&#128279; Paste Deck Code</div>
@@ -2641,7 +2619,7 @@
         </div>
     </div>
 
-    <!-- CUSTOM DECK BUILDER -->
+    
     <div id="menu-custom-deck" class="screen" style="display:none;">
         <h2 style="margin-bottom:4px;">&#9997; Build Your Deck</h2>
         <div style="font-family:'IM Fell English',serif; font-size:12px; color:#6b4f2a; margin-bottom:10px; font-style:italic;">Choose up to 9 cards &middot; Give it a name &middot; Enter the fray</div>
@@ -2693,21 +2671,20 @@
         </div>
     </div>
 
-<!-- SETTINGS -->
     <div id="menu-settings" class="screen" style="display:none; overflow-y:auto; justify-content:flex-start; padding:18px 28px 0;">
         <h2 style="margin-bottom:8px;">Settings</h2>
         <div class="settings-grid" style="max-width:700px; gap:20px; padding-bottom:4px;">
 
-            <!-- COL 1: Audio -->
+            
             <div class="settings-col">
                 <div class="settings-section-label">Audio</div>
                 <div class="settings-row">
                     <span class="settings-label">Music</span>
-                    <input type="range" id="v-m" class="settings-slider" value="40" min="0" max="100">
+                    <input type="range" id="v-m" class="settings-slider" value="40" min="0" max="100" oninput="setMusicVol(this.value)">
                 </div>
                 <div class="settings-row">
                     <span class="settings-label">SFX</span>
-                    <input type="range" id="v-s" class="settings-slider" value="70" min="0" max="100">
+                    <input type="range" id="v-s" class="settings-slider" value="70" min="0" max="100" oninput="setSfxVol(this.value)">
                 </div>
 
                 <div class="settings-section-label" style="margin-top:10px;">Menu Music</div>
@@ -2777,7 +2754,7 @@
                 <div style="font-size:9px; color:#7a5a30;" id="theme-hint">Select a theme — click Apply to confirm</div>
             </div>
 
-            <!-- COL 2: Visuals + Integrations -->
+            
             <div class="settings-col">
                 <div class="settings-section-label">Visuals</div>
                 <div class="settings-section-label" style="margin-top:2px; margin-bottom:4px; font-size:8px; letter-spacing:2px; color:#7a5a30; border:none; padding:0;">Graphics Quality</div>
@@ -2802,7 +2779,7 @@
                         oninput="applyCardDark(this.value)">
                 </div>
                 <div style="font-size:9px; color:#7a5a30; margin-top:-4px; margin-bottom:8px;">Darken player &amp; face-up cards to match scene</div>
-                <!-- Preview card -->
+                
                 <div style="display:flex; justify-content:center; margin-bottom:4px;">
                     <div id="card-dark-preview" class="card" data-rarity="common" style="
                         width:88px; height:130px; padding:7px 7px 6px; cursor:default;
@@ -2834,7 +2811,7 @@
                 </div>
             </div>
 
-            <!-- COL 3: Gameplay -->
+            
             <div class="settings-col">
                 <div class="settings-section-label">Difficulty</div>
                 <div class="settings-btn-group" id="opt-difficulty">
@@ -2892,7 +2869,7 @@
         </div>
     </div>
 
-    <!-- MODS -->
+    
     <div id="menu-mods" class="screen" style="display:none; overflow-y:auto; justify-content:flex-start; padding:20px 28px;">
         <h2 style="margin-bottom:6px;">🔧 Mods</h2>
         <div class="deco-rule" style="margin-bottom:14px;"></div>
@@ -2900,7 +2877,7 @@
             Load a <code style="font-family:monospace; background:rgba(0,0,0,0.4); padding:1px 5px; border-radius:3px; color:#c8a460;">.json</code> mod file to inject custom cards and decks into the game.
         </div>
 
-        <!-- Drop zone -->
+        
         <div id="mod-drop-zone" style="
             width:100%; max-width:460px;
             border: 2px dashed rgba(120,80,30,0.4); border-radius:10px;
@@ -2917,7 +2894,7 @@
             Drag &amp; drop a mod file here
         </div>
 
-        <!-- Explicit browse button -->
+        
         <button class="btn" style="min-width:180px; padding:8px 20px; font-size:10px; margin-bottom:16px;"
             onclick="document.getElementById('mod-file-input').click()">
             📂 Browse for Mod File
@@ -2929,7 +2906,7 @@
         <button class="btn" onclick="playSfx('menuClick'); toggle('menu-mods', false)">Return</button>
     </div>
 
-    <!-- END SCREEN -->
+    
     <div id="screen-end" class="screen" style="display:none;">
         <div id="end-title">RESULT</div>
         <div class="deco-rule"></div>
@@ -2938,7 +2915,7 @@
         <button class="btn" onclick="playSfx('menuClick'); returnToMenu()">🏠 Main Menu</button>
     </div>
 
-    <!-- BOARD -->
+    
     <div id="board" style="display:none; width:100%; height:100%; position:relative; z-index:3;">
         <div id="a-hud" class="hud">
             <div class="hud-header">
@@ -2962,7 +2939,7 @@
 
         <div id="turn-indicator">Your Turn</div>
 
-        <!-- 3D DIE -->
+        
         <div id="die-box">
             <div id="die-3d">
                 <div class="die-face face-front">⚀</div>
@@ -2978,14 +2955,14 @@
         <div id="p-hand" class="hand"></div>
         <div id="a-hand" class="ai-hand"></div>
 
-        <!-- Combat log -->
+        
         <div id="combat-log" style="
             position:absolute; bottom:18px; left:260px; right:260px; z-index:20;
             max-height:70px; overflow-y:auto; display:flex; flex-direction:column-reverse;
             pointer-events:none;">
         </div>
 
-        <!-- Forfeit confirmation popup -->
+        
         <div id="forfeit-popup">
             <div id="forfeit-popup-box">
                 <span id="forfeit-popup-icon">🏳</span>
@@ -3017,13 +2994,13 @@ for (let i = 0; i < 60; i++) {
     runeGrid.appendChild(el);
 }
 
-let _graphicsQuality  = 'mid';      // low / mid / high  (hoisted – used in animEmbers)
-// Game state vars hoisted to avoid TDZ when referenced in audio/SFX handlers
+let _graphicsQuality  = 'mid';      
+
 let _gameOverFired = false;
 let _forfeited     = false;
 let _aiActTimer    = null;
 let _pWasLow = false, _aWasLow = false;
-let _cardDark      = 0;             // 0-60, card brightness reduction
+let _cardDark      = 0;             
 
 const emberCanvas = document.getElementById('embers');
 const eCtx = emberCanvas.getContext('2d');
@@ -3053,7 +3030,7 @@ for (let i = 0; i < 40; i++) {
 }
 function animEmbers() {
     eCtx.clearRect(0, 0, emberCanvas.width, emberCanvas.height);
-    // Dynamically grow/shrink ember pool based on graphics quality
+    
     const targetCount = _graphicsQuality === 'high' ? 80 : _graphicsQuality === 'low' ? 0 : 40;
     while (embers.length < targetCount) { const e = spawnEmber(); e.y = Math.random() * window.innerHeight; e.life = Math.random(); embers.push(e); }
     while (embers.length > targetCount) embers.pop();
@@ -3097,9 +3074,6 @@ function animTrail() {
 }
 animTrail();
 
-/* ---- AUDIO ----
-   all procedural, no files. web audio api.
-   compressor on everything so nothing clips too hard */
 let AC = null, muted = false, musicVol = .4, sfxVol = .7;
 let _musicNodes = null;
 
@@ -3109,7 +3083,6 @@ function getAC() {
     return AC;
 }
 
-// ── helpers ──────────────────────────────────────────────
 function masterGain(vol) {
     const g = getAC().createGain();
     g.gain.setValueAtTime(muted ? 0 : vol, AC.currentTime);
@@ -3151,7 +3124,6 @@ function noise(dur, gainVal, filterFreq, dest) {
     src.start(now); src.stop(now + dur);
 }
 
-// ── helpers: punchy compressor on every sound ────────────
 function punchDest(vol) {
     const ac = getAC();
     const comp = ac.createDynamicsCompressor();
@@ -3194,7 +3166,7 @@ const SFX = {
 
     dieLand() {
         const dest = punchDest(sfxVol * 1.0);
-        osc('sine',     90,  0,    30,  0.18, 0.8, dest); // sub thud
+        osc('sine',     90,  0,    30,  0.18, 0.8, dest); 
         osc('triangle', 180, 0,    50,  0.12, 0.5, dest);
         noise(0.12, 0.6, 800,  dest);
         noise(0.06, 0.4, 3000, dest);
@@ -3212,11 +3184,11 @@ const SFX = {
         osc('sawtooth', 240, 0,    35,  0.26, 0.7, dest);
         osc('square',   120, 0,    30,  0.32, 0.6, dest);
         osc('triangle', 480, 0.01, 80,  0.18, 0.45,dest);
-        osc('sine',     55,  0,    18,  0.22, 0.8, dest); // deeper sub
-        osc('sawtooth', 360, 0.02, 50,  0.14, 0.5, dest); // mid crunch layer
+        osc('sine',     55,  0,    18,  0.22, 0.8, dest); 
+        osc('sawtooth', 360, 0.02, 50,  0.14, 0.5, dest); 
         noise(0.22, 0.90, 1500, dest);
         noise(0.14, 0.70, 400,  dest);
-        noise(0.08, 0.45, 6000, dest); // metallic crack
+        noise(0.08, 0.45, 6000, dest); 
     },
 
     mirror() {
@@ -3230,7 +3202,7 @@ const SFX = {
     mirrorTrigger() {
         const dest = punchDest(sfxVol * 0.9);
         osc('square',   1200, 0,    200, 0.08, 0.5, dest);
-        osc('sawtooth', 600,  0,    2400,0.12, 0.25,dest); // upward sweep
+        osc('sawtooth', 600,  0,    2400,0.12, 0.25,dest); 
         [1047, 1319, 1568].forEach((f, i) =>
             osc('sine', f, 0.05 + i * 0.04, f * 1.8, 0.25, 0.18, dest));
         noise(0.1, 0.55, 4000, dest);
@@ -3243,7 +3215,7 @@ const SFX = {
             osc('sine',     f,     i * 0.06, f * 1.6, 0.4, 0.32, dest);
             osc('triangle', f * 2, i * 0.06, f * 3,   0.3, 0.10, dest);
         });
-        noise(0.06, 0.2, 8000, dest); // sparkle
+        noise(0.06, 0.2, 8000, dest); 
     },
 
     vampire() {
@@ -3258,18 +3230,18 @@ const SFX = {
 
     tariff() {
         const dest = punchDest(sfxVol * 0.8);
-        osc('square',   150, 0,    100, 0.22, 0.55,dest); // stamp thud
-        osc('sine',     80,  0,    60,  0.18, 0.6, dest); // low thud
-        noise(0.15, 0.5, 600,  dest); // paper
-        noise(0.08, 0.3, 3000, dest); // papery hiss
+        osc('square',   150, 0,    100, 0.22, 0.55,dest); 
+        osc('sine',     80,  0,    60,  0.18, 0.6, dest); 
+        noise(0.15, 0.5, 600,  dest); 
+        noise(0.08, 0.3, 3000, dest); 
         osc('triangle', 300, 0.06, 200, 0.10, 0.35,dest);
     },
 
     plague() {
         const dest = punchDest(sfxVol * 0.8);
-        noise(0.25, 0.6, 400,  dest); // low bubbling
+        noise(0.25, 0.6, 400,  dest); 
         noise(0.15, 0.4, 1200, dest);
-        noise(0.08, 0.3, 200,  dest); // gross sub
+        noise(0.08, 0.3, 200,  dest); 
         osc('sawtooth', 120, 0,    60,  0.14, 0.5, dest);
         osc('triangle', 240, 0.05, 80,  0.12, 0.4, dest);
         osc('sine',     80,  0,    40,  0.16, 0.55,dest);
@@ -3287,7 +3259,7 @@ const SFX = {
         osc('sawtooth', 110, 0,    55,  0.35, 0.7, dest);
         osc('sawtooth', 220, 0,    110, 0.28, 0.6, dest);
         osc('square',   165, 0,    82,  0.22, 0.55,dest);
-        osc('sine',     55,  0,    30,  0.30, 0.8, dest); // sub rumble
+        osc('sine',     55,  0,    30,  0.30, 0.8, dest); 
         noise(0.3,  0.7, 800,  dest);
         noise(0.15, 0.4, 3000, dest);
         osc('sawtooth', 180, 0.1, 90, 0.30, 0.6, dest);
@@ -3306,10 +3278,10 @@ const SFX = {
         osc('square',   165, 0,    1320, 0.36, 0.58, dest);
         osc('sawtooth', 220, 0,    1760, 0.34, 0.52, dest);
         osc('triangle', 440, 0,    3520, 0.26, 0.42, dest);
-        osc('sawtooth', 330, 0.02, 2640, 0.20, 0.38, dest); // new mid layer
+        osc('sawtooth', 330, 0.02, 2640, 0.20, 0.38, dest); 
         osc('sine',     880,  0.04, 3520, 0.24, 0.38, dest);
         osc('sine',     1760, 0.06, 7040, 0.20, 0.28, dest);
-        osc('sine',     3520, 0.08, 7040, 0.12, 0.18, dest); // extra sparkle
+        osc('sine',     3520, 0.08, 7040, 0.12, 0.18, dest); 
         osc('sine',     50,  0,    18,   0.55, 0.45, dest);
         osc('sine',     38,  0,    14,   0.48, 0.40, dest);
         noise(0.22, 1.0, 5000, dest);
@@ -3323,8 +3295,8 @@ const SFX = {
         osc('square',   260, 0,    28,  0.32, 0.58, dest);
         osc('sawtooth', 370, 0.03, 22,  0.28, 0.52, dest);
         osc('sawtooth', 180, 0.06, 18,  0.24, 0.48, dest);
-        osc('sawtooth', 90,  0.08, 14,  0.20, 0.44, dest); // extra low crash
-        osc('sine',     75,  0,    22,  0.38, 0.65, dest); // sub
+        osc('sawtooth', 90,  0.08, 14,  0.20, 0.44, dest); 
+        osc('sine',     75,  0,    22,  0.38, 0.65, dest); 
         noise(0.28, 0.85, 900,  dest);
         noise(0.18, 0.55, 250,  dest);
         noise(0.10, 0.45, 3500, dest);
@@ -3350,7 +3322,7 @@ const SFX = {
         melody.forEach((f, i) => {
             osc('triangle', f,     i * 0.11, f * 1.2,  0.32, 0.32, dest);
             osc('sine',     f * 2, i * 0.11, f * 2.4,  0.22, 0.14, dest);
-            osc('square',   f * 0.5, i * 0.12, f * 0.6, 0.10, 0.22, dest); // low harmony
+            osc('square',   f * 0.5, i * 0.12, f * 0.6, 0.10, 0.22, dest); 
         });
         [261.6, 329.6, 392, 523].forEach((f, i) => {
             osc('sine', f, 0.05 + i * 0.04, f * 1.1, 0.18, 0.5, dest);
@@ -3403,7 +3375,7 @@ const SFX = {
         const dest = masterGain(sfxVol * 0.40);
         osc('sine',     880,  0,    1320, 0.18, 0.20, dest);
         osc('triangle', 1320, 0.05, 1760, 0.13, 0.17, dest);
-        osc('sine',     440,  0,    660,  0.10, 0.22, dest); // lower octave under
+        osc('sine',     440,  0,    660,  0.10, 0.22, dest); 
     },
 
     cardDeal() {
@@ -3415,16 +3387,15 @@ const SFX = {
     },
 };
 
-// ── CUSTOM MUSIC (URL-based) ──────────────────────────────────────────────────
 let _customMusicUrl = '';
-let _customAudioEl = null;   // single <audio> element reused for both contexts
+let _customAudioEl = null;   
 
 function _getOrCreateAudioEl() {
     if (!_customAudioEl) {
         _customAudioEl = new Audio();
         _customAudioEl.loop = true;
-        // crossOrigin removed: setting it to 'anonymous' blocks playback from
-        // servers that don't send CORS headers (most direct MP3 links won't).
+        
+        
     }
     return _customAudioEl;
 }
@@ -3432,7 +3403,7 @@ function _getOrCreateAudioEl() {
 function startCustomAudio() {
     if (muted || !_customMusicUrl) return;
     const el = _getOrCreateAudioEl();
-    el.loop = true; // ensure loop survives element recreation
+    el.loop = true; 
     if (el.src !== _customMusicUrl) el.src = _customMusicUrl;
     el.volume = musicVol;
     el.play().catch(err => { console.warn('[CustomAudio] play() failed:', err); });
@@ -3510,7 +3481,6 @@ function testCustomMusic() {
 
 const _origSetMusicVol = window.setMusicVol;
 
-// ── background music ─────────────────────────────────────
 let _menuMusicNodes = null;
 
 function startMenuAudio() {
@@ -3524,18 +3494,18 @@ function startMenuAudio() {
 
     const master = ac.createGain();
     master.gain.setValueAtTime(0, ac.currentTime);
-    master.gain.linearRampToValueAtTime(musicVol * 0.45, ac.currentTime + 2.0);
+    master.gain.linearRampToValueAtTime(musicVol * 0.59, ac.currentTime + 2.0);
     master.connect(ac.destination);
     _menuMusicNodes = { master, oscs: [], intervals: [] };
 
-    // Deep sub pad — A0=27.5Hz gives a chest-felt presence
+    
     const subPad = ac.createOscillator(); const subG = ac.createGain();
     const subFilt = ac.createBiquadFilter(); subFilt.type = 'lowpass'; subFilt.frequency.value = 80;
     subPad.type = 'sine'; subPad.frequency.value = 36.7; subG.gain.value = 0.22;
     subPad.connect(subFilt); subFilt.connect(subG); subG.connect(master);
     subPad.start(); _menuMusicNodes.oscs.push(subPad);
 
-    // Slow reverberant pad: stacked fifths in D minor — more voices
+    
     const padFreqs = [73.4, 110, 146.8, 220, 293.7, 184.9];
     padFreqs.forEach((freq, i) => {
         const o = ac.createOscillator();
@@ -3549,14 +3519,14 @@ function startMenuAudio() {
         o.start(); _menuMusicNodes.oscs.push(o);
     });
 
-    // Slow breathing LFO on pad volume
+    
     const lfo = ac.createOscillator();
     const lfoG = ac.createGain();
     lfo.frequency.value = 0.12; lfoG.gain.value = 0.07;
     lfo.connect(lfoG); lfoG.connect(master.gain);
     lfo.start(); _menuMusicNodes.oscs.push(lfo);
 
-    // Slow second LFO for subtle pitch shimmer
+    
     const lfo2 = ac.createOscillator();
     const lfo2G = ac.createGain();
     lfo2.frequency.value = 0.07; lfo2G.gain.value = 0.4;
@@ -3566,7 +3536,7 @@ function startMenuAudio() {
     });
     lfo2.start(); _menuMusicNodes.oscs.push(lfo2);
 
-    // D natural minor scale in octave 4: D E F G A Bb C D
+    
     const harpPhrases = [
         [293.7, 0], [349.2, 0.9], [392.0, 1.7], [440.0, 2.8],
         [392.0, 4.2], [349.2, 5.1], [329.6, 6.3], [293.7, 7.8],
@@ -3613,8 +3583,8 @@ function startMenuAudio() {
     }
     setTimeout(playBell, 3000);
 
-    // ── Cello-like bass walk: slow quarter notes in D minor ──
-    // D2 A1 F2 C2 / Bb1 F2 A1 D2 (8 notes, each ~1.8s apart)
+    
+    
     const celloNotes = [73.4, 55, 87.3, 65.4, 58.3, 87.3, 55, 73.4];
     let celloIdx = 0;
     function playCello() {
@@ -3636,13 +3606,13 @@ function startMenuAudio() {
     }
     setTimeout(playCello, 1500);
 
-    // ── Ghost choir: soft sine cluster on the 5th and octave ──
+    
     function playChoir() {
         if (!_menuMusicNodes) return;
         const now = ac.currentTime;
         [[146.8, 0.09], [220, 0.07], [293.7, 0.05], [176.0, 0.06]].forEach(([freq, vol], i) => {
             const o = ac.createOscillator(); const g = ac.createGain();
-            o.type = 'sine'; o.frequency.value = freq * (1 + i * 0.003); // micro-detune for chorus
+            o.type = 'sine'; o.frequency.value = freq * (1 + i * 0.003); 
             g.gain.setValueAtTime(0, now + i * 0.1);
             g.gain.linearRampToValueAtTime(vol, now + i * 0.1 + 1.5);
             g.gain.setValueAtTime(vol, now + i * 0.1 + 4.0);
@@ -3677,14 +3647,14 @@ function startBgAudio() {
     if (typeof _battleTrack !== 'undefined' && _battleTrack === 3) return startBgAudioTrack3();
     if (muted) return;
     const ac = getAC();
-    if (_musicNodes) return; // already playing
+    if (_musicNodes) return; 
 
     const master = ac.createGain();
-    master.gain.setValueAtTime(musicVol * 0.55, ac.currentTime);
+    master.gain.setValueAtTime(musicVol * 0.72, ac.currentTime);
     master.connect(ac.destination);
     _musicNodes = { master, oscs: [], intervals: [] };
 
-    // Convolver for warmth/space (impulse reverb)
+    
     const conv = ac.createConvolver();
     const iLen = ac.sampleRate * 1.2;
     const irBuf = ac.createBuffer(2, iLen, ac.sampleRate);
@@ -3696,7 +3666,7 @@ function startBgAudio() {
     const convGain = ac.createGain(); convGain.gain.value = 0.18;
     conv.connect(convGain); convGain.connect(master);
 
-    // Drone: root A1=55Hz + fifth + octave, richer types
+    
     function makeDrone(freq, type, vol, toConv) {
         const o = ac.createOscillator();
         const g = ac.createGain();
@@ -3713,24 +3683,24 @@ function startBgAudio() {
     makeDrone(82.4,'sawtooth', 0.13, true);
     makeDrone(110, 'triangle', 0.10, false);
     makeDrone(55,  'sine',     0.22, false);
-    makeDrone(165, 'sine',     0.06, false); // added major sixth for colour
+    makeDrone(165, 'sine',     0.06, false); 
 
-    // Slow tremolo LFO
+    
     const lfo = ac.createOscillator();
     const lfoGain = ac.createGain();
     lfo.frequency.value = 0.25; lfoGain.gain.value = 0.06;
     lfo.connect(lfoGain); lfoGain.connect(master.gain);
     lfo.start(); _musicNodes.oscs.push(lfo);
 
-    // Second LFO for subtle filter sweep on drone
+    
     const lfo2 = ac.createOscillator();
     const lfo2G = ac.createGain();
     lfo2.frequency.value = 0.08; lfo2G.gain.value = 300;
     lfo2.connect(lfo2G);
     lfo2.start(); _musicNodes.oscs.push(lfo2);
 
-    // Melody: dark pentatonic minor with richer voice (triangle + detuned sine layer)
-    // A minor pentatonic: A B C E F# A ...
+    
+    
     const melodyNotes = [110, 130.8, 146.8, 164.8, 196, 220, 261.6, 246.9, 220, 196, 164.8, 146.8, 130.8, 110, 130.8, 164.8];
     let noteIdx = 0;
 
@@ -3788,7 +3758,7 @@ function startBgAudio() {
     }
     setTimeout(playCounter, 1400);
 
-    // ── Rhythmic war drum pattern: kick + snare at ~70 BPM ──
+    
     const drumBeat = 60 / 70;
     const drumEighth = drumBeat / 2;
 
@@ -3797,7 +3767,7 @@ function startBgAudio() {
         o.type = 'sine';
         o.frequency.setValueAtTime(140, t);
         o.frequency.exponentialRampToValueAtTime(35, t + 0.1);
-        g.gain.setValueAtTime(musicVol * 0.55, t);
+        g.gain.setValueAtTime(musicVol * 0.72, t);
         g.gain.exponentialRampToValueAtTime(0.0001, t + 0.22);
         o.connect(g); g.connect(ac.destination);
         o.start(t); o.stop(t + 0.25);
@@ -3810,7 +3780,7 @@ function startBgAudio() {
         for (let i = 0; i < bufLen; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / bufLen, 1.2);
         const src = ac.createBufferSource(); src.buffer = buf;
         const f = ac.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 1800; f.Q.value = 0.7;
-        const g = ac.createGain(); g.gain.setValueAtTime(musicVol * 0.28, t);
+        const g = ac.createGain(); g.gain.setValueAtTime(musicVol * 0.36, t);
         g.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
         src.connect(f); f.connect(g); g.connect(ac.destination);
         src.start(t); src.stop(t + 0.20);
@@ -3868,7 +3838,7 @@ function startBgAudio() {
 
 function stopBgAudio() {
     if (_customAudioEl) { _customAudioEl.pause(); }
-    if (_battleTrack !== 99 && false) { stopCustomAudio(true); return; } // legacy path disabled
+    if (_battleTrack !== 99 && false) { stopCustomAudio(true); return; } 
     if (!_musicNodes) return;
     try {
         _musicNodes.intervals.forEach(t => clearTimeout(t));
@@ -3888,26 +3858,30 @@ function playSfx(key) {
 }
 
 function setMusicVol(v) {
-    musicVol = v / 100;
-    if (_musicNodes)     _musicNodes.master.gain.setValueAtTime(musicVol * 0.55, AC ? AC.currentTime : 0);
-    if (_menuMusicNodes) _menuMusicNodes.master.gain.setValueAtTime(musicVol * 0.45, AC ? AC.currentTime : 0);
-    if (_customAudioEl)  _customAudioEl.volume = musicVol;
+    musicVol = Math.max(0, Math.min(1, v / 100));
+    const t = AC ? AC.currentTime : 0;
+    if (_musicNodes) {
+        _musicNodes.master.gain.cancelScheduledValues(t);
+        _musicNodes.master.gain.setValueAtTime(musicVol * 0.72, t);
+    }
+    if (_menuMusicNodes) {
+        _menuMusicNodes.master.gain.cancelScheduledValues(t);
+        _menuMusicNodes.master.gain.setValueAtTime(musicVol * 0.59, t);
+    }
+    if (_customAudioEl) _customAudioEl.volume = musicVol;
     saveSettings();
 }
-function setSfxVol(v) { sfxVol = v / 100; saveSettings(); }
+function setSfxVol(v) { sfxVol = Math.max(0, Math.min(1.3, (v / 100) * 1.3)); saveSettings(); }
 
-// ── SETTINGS STATE ──
-let _difficulty       = 'normal';   // easy / normal / hard
-let _aiThink          = 'normal';   // fast / normal / slow
-let _critMult         = 2.2;        // crit damage multiplier (playtester setting)
-// _graphicsQuality declared at top of script (before animEmbers) to avoid TDZ
+let _difficulty       = 'normal';   
+let _aiThink          = 'normal';   
+let _critMult         = 2.2;        
 
 const SETTINGS_KEY = 'dr_settings';
 
-// ── THEME ─────────────────────────────────────────────────────────────────────
 const THEMES = ['default','blood','arcane','ocean','forest','ash','gold','ice'];
-let _currentTheme  = 'default'; // applied to body
-let _pendingTheme  = 'default'; // selected in settings (not yet applied)
+let _currentTheme  = 'default'; 
+let _pendingTheme  = 'default'; 
 
 function _syncThemeSwatches(theme) {
     document.querySelectorAll('#opt-theme-picker .theme-swatch').forEach(btn => {
@@ -3920,7 +3894,7 @@ function _syncThemeSwatches(theme) {
 }
 
 function selectTheme(theme) {
-    // Called when a swatch is clicked — only marks pending, does NOT apply yet
+    
     _pendingTheme = theme;
     _syncThemeSwatches(theme);
 }
@@ -3932,7 +3906,7 @@ function applyTheme(theme) {
     if (_currentTheme !== 'default') document.body.classList.add('theme-' + _currentTheme);
     _syncThemeSwatches(_currentTheme);
 
-    // Patch inline-styled elements that CSS classes can't reach due to specificity
+    
     const urlInput = document.getElementById('opt-custom-music-url');
     const testBtn  = document.getElementById('btn-test-audio');
     const stopBtn  = document.getElementById('btn-stop-audio');
@@ -3963,7 +3937,6 @@ function applyTheme(theme) {
     }
 }
 
-// Wire swatch onclick after DOM ready
 window.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#opt-theme-picker .theme-swatch').forEach(btn => {
         btn.addEventListener('click', function() {
@@ -3973,7 +3946,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Load all saved settings unconditionally on boot
 window.addEventListener('DOMContentLoaded', function() {
     if (typeof loadSettings === 'function') loadSettings();
 });
@@ -4060,7 +4032,7 @@ function loadSettings() {
             if (lbl) lbl.textContent = _critMult.toFixed(1) + '×';
         }
 
-        // Berserker nerf
+        
         if (s.berserkerNerf != null) {
             const el = document.getElementById('opt-berserker-nerf');
             if (el) el.checked = s.berserkerNerf;
@@ -4126,24 +4098,19 @@ function previewGraphics(val) {
     if (el) el.textContent = hints[val] || '';
 }
 
-// ── Texture preload registry ─────────────────────────────────────────────────
-// Uses new Image() which actually forces browser fetch+decode into cache,
-// unlike <link rel="preload"> which is only advisory.
-// "Unloading" means dropping our reference — browser may evict from cache
-// naturally when memory pressure occurs, which is the best we can do.
-const _texRegistry = new Map(); // url → Image object
+const _texRegistry = new Map(); 
 
 function _preloadTexture(url) {
     if (_texRegistry.has(url)) return;
     const img = new Image();
-    img.src = url; // triggers fetch immediately
+    img.src = url; 
     _texRegistry.set(url, img);
 }
 
 function _unloadTexture(url) {
     const img = _texRegistry.get(url);
     if (!img) return;
-    img.src = ''; // drop reference / cancel if still loading
+    img.src = ''; 
     _texRegistry.delete(url);
 }
 
@@ -4155,7 +4122,6 @@ function _setTextures(urls) {
     for (const url of urls) _preloadTexture(url);
 }
 
-// Texture sets per quality tier — must match what gfx CSS actually uses
 const _TEX = {
     low:  [],
     mid:  [
@@ -4171,18 +4137,17 @@ const _TEX = {
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj4KICA8ZmlsdGVyIGlkPSJsZWF0aCI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC41IiBudW1PY3RhdmVzPSI1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjA2ICAwIDAgMCAwIDAuMDMgIDAgMCAwIDAgMC4wMSAgMCAwIDAgMC4yOCAwIi8+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbGw9InRyYW5zcGFyZW50Ii8+CiAgPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbHRlcj0idXJsKCNsZWF0aCkiIG9wYWNpdHk9IjEiLz4KPC9zdmc+',
     ],
 };
-// Apply mid quality immediately on boot (body already has gfx-mid class).
-// loadSettings() will call applyGraphicsQuality() again if a different value was saved.
+
 applyGraphicsQuality('mid');
 
 function applyGraphicsQuality(val) {
     _graphicsQuality = val || 'mid';
     previewGraphics(_graphicsQuality);
 
-    // Swap texture preload hints
+    
     _setTextures(_TEX[_graphicsQuality] || []);
 
-    // Body classes for CSS-driven quality tiers
+    
     document.body.classList.remove('gfx-low', 'gfx-mid', 'gfx-high');
     document.body.classList.add('gfx-' + _graphicsQuality);
 
@@ -4202,7 +4167,7 @@ function applyGraphicsQuality(val) {
         candleEls.forEach(c => c.style.display = 'none');
         if (fieldLineEl)  fieldLineEl.style.opacity  = '0';
         if (gc) gc.style.filter = '';
-        // Disable rarity glow stylesheet (bloom box-shadows on cards)
+        
         const glowStyle = document.getElementById('rarity-glow-style');
         if (glowStyle) glowStyle.disabled = true;
     } else if (_graphicsQuality === 'mid') {
@@ -4213,7 +4178,7 @@ function applyGraphicsQuality(val) {
         candleEls.forEach(c => c.style.display = '');
         if (fieldLineEl)  fieldLineEl.style.opacity  = '';
         if (gc) gc.style.filter = '';
-        // Restore rarity glow based on user setting
+        
         const glowStyle = document.getElementById('rarity-glow-style');
         const glowOn = document.getElementById('opt-rarity-glow')?.checked ?? true;
         if (glowStyle) glowStyle.disabled = !glowOn;
@@ -4224,11 +4189,11 @@ function applyGraphicsQuality(val) {
         if (sigilInnerEl) sigilInnerEl.style.display = '';
         candleEls.forEach(c => c.style.display = '');
         if (fieldLineEl)  fieldLineEl.style.opacity  = '';
-        if (gc) gc.style.filter = ''; // CSS handles contrast/saturate via body.gfx-high
+        if (gc) gc.style.filter = ''; 
         const glowStyle = document.getElementById('rarity-glow-style');
         const glowOn = document.getElementById('opt-rarity-glow')?.checked ?? true;
         if (glowStyle) glowStyle.disabled = !glowOn;
-        // Boost ember particle count/speed for high quality
+        
 
     }
     saveSettings();
@@ -4253,10 +4218,8 @@ function setCritMult(v) {
     saveSettings();
 }
 
-// ── Poison / Burn stacking helpers ──────────────────────────────────────────
-// Instead of overwriting existing stacks, add turns and take the higher dmg.
 function stackPoison(target, turns, dmg) {
-    // target: 'p' or 'a'
+    
     const kTurns = target === 'p' ? 'pPoison'    : 'aPoison';
     const kDmg   = target === 'p' ? 'pPoisonDmg' : 'aPoisonDmg';
     state[kTurns] = (state[kTurns] || 0) + turns;
@@ -4292,9 +4255,8 @@ function applyCardDark(val) {
     saveSettings();
 }
 
-// ── MUSIC TRACK SELECTION ────────────────────────────────────────────────────
-let _menuTrack   = 0;   // 0=Meditation, 1=Mourning Strings, 2=Cathedral Bells, 3=Ember Waltz
-let _battleTrack = 0;   // 0=Warfare,    1=War Drums,        2=Void Pulse,       3=Blood March
+let _menuTrack   = 0;   
+let _battleTrack = 0;   
 
 function setMenuTrack(val) {
     _menuTrack = parseInt(val);
@@ -4389,18 +4351,17 @@ function applyAndReloadSettings() {
     }
 }
 
-// ── MENU TRACK 1: Mourning Strings — fast, urgent, ~140 BPM driving strings ──
 function startMenuAudioTrack1() {
     if (muted) return;
     const ac = getAC();
     if (_menuMusicNodes) return;
     const master = ac.createGain();
     master.gain.setValueAtTime(0, ac.currentTime);
-    master.gain.linearRampToValueAtTime(musicVol * 0.5, ac.currentTime + 0.8);
+    master.gain.linearRampToValueAtTime(musicVol * 0.65, ac.currentTime + 0.8);
     master.connect(ac.destination);
     _menuMusicNodes = { master, oscs: [], intervals: [] };
 
-    // Sawtooth string pads — A minor tonal centre
+    
     [[220, 0.11], [330, 0.07], [440, 0.05]].forEach(([freq, vol]) => {
         const o = ac.createOscillator(); const g = ac.createGain();
         const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 1800;
@@ -4409,14 +4370,14 @@ function startMenuAudioTrack1() {
         o.start(); _menuMusicNodes.oscs.push(o);
     });
 
-    // Driving 16th-note ostinato: A3 repeated fast with accent pattern
-    // BPM = 140 → beat = 0.4286s → 16th = 0.1071s
+    
+    
     const beat = 60 / 140;
     const sixteenth = beat / 4;
-    // Accent pattern: strong on 1 & 3 of each beat
+    
     const accentPattern = [0.18, 0.07, 0.12, 0.07,  0.18, 0.07, 0.12, 0.07,
                             0.18, 0.07, 0.12, 0.07,  0.18, 0.07, 0.12, 0.07];
-    const phraseLen = 16 * sixteenth; // one bar
+    const phraseLen = 16 * sixteenth; 
 
     function playOstinato() {
         if (!_menuMusicNodes) return;
@@ -4424,7 +4385,7 @@ function startMenuAudioTrack1() {
         accentPattern.forEach((vol, step) => {
             const t = now + step * sixteenth;
             const o = ac.createOscillator(); const g = ac.createGain();
-            o.type = 'sawtooth'; o.frequency.value = 220; // A3
+            o.type = 'sawtooth'; o.frequency.value = 220; 
             g.gain.setValueAtTime(0, t);
             g.gain.linearRampToValueAtTime(vol, t + 0.008);
             g.gain.exponentialRampToValueAtTime(0.0001, t + sixteenth * 0.85);
@@ -4436,8 +4397,8 @@ function startMenuAudioTrack1() {
     }
     playOstinato();
 
-    // Fast melody over the top — A natural minor scale, 8th notes
-    // Pattern: A4 B4 C5 D5 E5 D5 C5 B4 / A4 G4 F4 E4 D4 E4 F4 A4
+    
+    
     const melNotes = [
         [440,0],[494,1],[523,2],[587,3],[659,4],[587,5],[523,6],[494,7],
         [440,8],[392,9],[349,10],[330,11],[294,12],[330,13],[349,14],[440,15]
@@ -4464,7 +4425,7 @@ function startMenuAudioTrack1() {
     }
     playMelody();
 
-    // Bass walk: A2 E2 F2 E2 every bar
+    
     const bassNotes = [[110,0],[82.4,beat],[87.3,beat*2],[82.4,beat*3]];
     const bassLen = beat * 4;
     function playBass() {
@@ -4486,18 +4447,17 @@ function startMenuAudioTrack1() {
     playBass();
 }
 
-// ── MENU TRACK 2: Cathedral Bells — baroque classical, harpsichord-like, D major ──
 function startMenuAudioTrack2() {
     if (muted) return;
     const ac = getAC();
     if (_menuMusicNodes) return;
     const master = ac.createGain();
     master.gain.setValueAtTime(0, ac.currentTime);
-    master.gain.linearRampToValueAtTime(musicVol * 0.45, ac.currentTime + 1.2);
+    master.gain.linearRampToValueAtTime(musicVol * 0.59, ac.currentTime + 1.2);
     master.connect(ac.destination);
     _menuMusicNodes = { master, oscs: [], intervals: [] };
 
-    // Harpsichord-like timbre helper: sharp attack, quick decay, bright overtones
+    
     function pluck(freq, t, vol, dur) {
         const o = ac.createOscillator(); const g = ac.createGain();
         const f = ac.createBiquadFilter(); f.type = 'highshelf'; f.frequency.value = 2000; f.gain.value = 8;
@@ -4509,22 +4469,22 @@ function startMenuAudioTrack2() {
         o.start(t); o.stop(t + dur + 0.01);
     }
 
-    // BPM 96 → beat = 0.625s, 8th = 0.3125s
+    
     const beat = 60 / 96;
     const eighth = beat / 2;
 
-    // Soprano melody: D major — "Jesu Joy" inspired 2-bar phrase (16 8th notes)
-    // D5 E5 F#5 G5 A5 G5 F#5 E5  D5 F#5 A5 D6 A5 F#5 E5 D5
+    
+    
     const soprano = [
         587, 659, 740, 784, 880, 784, 740, 659,
         587, 740, 880, 1175, 880, 740, 659, 587
     ];
-    // Alto harmony (thirds below)
+    
     const alto = [
         494, 554, 622, 659, 740, 659, 622, 554,
         494, 622, 740, 988, 740, 622, 554, 494
     ];
-    // Bass: D2 A2 D2 A2 / D2 F#2 A2 D3 (quarter notes)
+    
     const bass = [
         [147, 0], [220, beat], [147, beat*2], [220, beat*3],
         [147, beat*4], [185, beat*5], [220, beat*6], [294, beat*7]
@@ -4560,22 +4520,21 @@ function startMenuAudioTrack2() {
     toll();
 }
 
-// ── MENU TRACK 3: Ember Waltz — dark 3/4 waltz, D minor, 90 BPM ──
 function startMenuAudioTrack3() {
     if (muted) return;
     const ac = getAC();
     if (_menuMusicNodes) return;
     const master = ac.createGain();
     master.gain.setValueAtTime(0, ac.currentTime);
-    master.gain.linearRampToValueAtTime(musicVol * 0.48, ac.currentTime + 1.0);
+    master.gain.linearRampToValueAtTime(musicVol * 0.62, ac.currentTime + 1.0);
     master.connect(ac.destination);
     _menuMusicNodes = { master, oscs: [], intervals: [] };
 
     const bpm = 90;
     const beat = 60 / bpm;
-    const barLen = beat * 3; // 3/4 time
+    const barLen = beat * 3; 
 
-    // Warm pad — D minor chord (D F A)
+    
     [[73.4,0.12],[87.3,0.09],[110,0.08],[146.8,0.07]].forEach(([freq,vol]) => {
         const o = ac.createOscillator(); const g = ac.createGain();
         const f = ac.createBiquadFilter(); f.type='lowpass'; f.frequency.value=700;
@@ -4584,8 +4543,8 @@ function startMenuAudioTrack3() {
         o.start(); _menuMusicNodes.oscs.push(o);
     });
 
-    // Waltz bass — oom-pah-pah feel (root on 1, chord tones on 2 & 3)
-    // D2 A1 A1 / F2 C2 C2 / Bb1 F1 F1 / A1 E2 E2
+    
+    
     const waltzBassPattern = [
         [73.4,0],[55,beat],[55,beat*2],
         [87.3,barLen],[65.4,barLen+beat],[65.4,barLen+beat*2],
@@ -4611,8 +4570,8 @@ function startMenuAudioTrack3() {
     }
     playWaltzBass();
 
-    // Melody: D natural minor, quarter notes in 3/4
-    // D5 C5 Bb4 / A4 G4 F4 / E4 F4 G4 / A4 — repeat with variations
+    
+    
     const melPhrase = [
         [587,0],[523,beat],[466,beat*2],
         [440,barLen],[392,barLen+beat],[349,barLen+beat*2],
@@ -4651,16 +4610,16 @@ function startMenuAudioTrack3() {
     function playWaltzStabs() {
         if (!_menuMusicNodes) return;
         const now = ac.currentTime;
-        // Bar 1: D min chord [D F A] on beats 2 & 3
+        
         waltzChordStab(now+beat,   [146.8,175,220], 0.08);
         waltzChordStab(now+beat*2, [146.8,175,220], 0.06);
-        // Bar 2: F maj [F A C] 
+        
         waltzChordStab(now+barLen+beat,   [174.6,220,261.6], 0.08);
         waltzChordStab(now+barLen+beat*2, [174.6,220,261.6], 0.06);
-        // Bar 3: Bb [Bb D F]
+        
         waltzChordStab(now+barLen*2+beat,   [116.5,146.8,175], 0.08);
         waltzChordStab(now+barLen*2+beat*2, [116.5,146.8,175], 0.06);
-        // Bar 4: A min [A C E]
+        
         waltzChordStab(now+barLen*3+beat,   [110,130.8,165], 0.08);
         waltzChordStab(now+barLen*3+beat*2, [110,130.8,165], 0.06);
         const tid = setTimeout(playWaltzStabs, bassPhaseLen * 1000);
@@ -4669,13 +4628,12 @@ function startMenuAudioTrack3() {
     playWaltzStabs();
 }
 
-// ── BATTLE TRACK 3: Blood March — grim processional, 80 BPM, brass + war drums ──
 function startBgAudioTrack3() {
     if (muted) return;
     const ac = getAC();
     if (_musicNodes) return;
     const master = ac.createGain();
-    master.gain.setValueAtTime(musicVol * 0.52, ac.currentTime);
+    master.gain.setValueAtTime(musicVol * 0.68, ac.currentTime);
     master.connect(ac.destination);
     _musicNodes = { master, oscs: [], intervals: [] };
 
@@ -4716,21 +4674,21 @@ function startBgAudioTrack3() {
     function marchPattern() {
         if (!_musicNodes) return;
         const now = ac.currentTime;
-        marchKick(now, 0.9);          // beat 1 strong
-        marchKick(now+beat, 0.55);    // beat 2
-        marchKick(now+beat*2, 0.70);  // beat 3
-        marchKick(now+beat*3, 0.55);  // beat 4
-        marchSnare(now+beat*0.5, 0.35); // off-1
-        marchSnare(now+beat*1.5, 0.45); // off-2 (strong)
-        marchSnare(now+beat*2.5, 0.35); // off-3
-        marchSnare(now+beat*3.5, 0.50); // off-4 (strong)
+        marchKick(now, 0.9);          
+        marchKick(now+beat, 0.55);    
+        marchKick(now+beat*2, 0.70);  
+        marchKick(now+beat*3, 0.55);  
+        marchSnare(now+beat*0.5, 0.35); 
+        marchSnare(now+beat*1.5, 0.45); 
+        marchSnare(now+beat*2.5, 0.35); 
+        marchSnare(now+beat*3.5, 0.50); 
         const tid = setTimeout(marchPattern, beat * 4 * 1000);
         _musicNodes.intervals.push(tid);
     }
     marchPattern();
 
-    // Brass fanfare — heroic E minor descending, half notes
-    // E3 D3 C3 B2 / A2 G2 A2 E2 (processional feel)
+    
+    
     const brassPhrase = [
         [164.8,0],[146.8,half],[130.8,half*2],[123.5,half*3],
         [110,half*4],[98,half*5],[110,half*6],[82.4,half*7]
@@ -4749,7 +4707,7 @@ function startBgAudioTrack3() {
             g.gain.exponentialRampToValueAtTime(0.0001, now+t+half*0.9);
             o.connect(f); f.connect(g); g.connect(master);
             o.start(now+t); o.stop(now+t+half);
-            // Harmony fifth above
+            
             const o2 = ac.createOscillator(); const g2 = ac.createGain();
             o2.type='triangle'; o2.frequency.value=freq*1.5;
             g2.gain.setValueAtTime(0, now+t+0.03);
@@ -4785,7 +4743,7 @@ function startBgAudioTrack1() {
     const ac = getAC();
     if (_musicNodes) return;
     const master = ac.createGain();
-    master.gain.setValueAtTime(musicVol * 0.55, ac.currentTime);
+    master.gain.setValueAtTime(musicVol * 0.72, ac.currentTime);
     master.connect(ac.destination);
     _musicNodes = { master, oscs: [], intervals: [] };
 
@@ -4794,7 +4752,7 @@ function startBgAudioTrack1() {
     const eighth = beat / 2;
     const sixteenth = beat / 4;
 
-    // ── Low bass drone root (E1=41Hz) with fifths ──
+    
     [[41.2, 0.18], [61.7, 0.10], [82.4, 0.07]].forEach(([freq, vol]) => {
         const o = ac.createOscillator(); const g = ac.createGain();
         const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 350;
@@ -4803,7 +4761,7 @@ function startBgAudioTrack1() {
         o.start(); _musicNodes.oscs.push(o);
     });
 
-    // ── Kick drum helper ──
+    
     function kick(t, vol) {
         const o = ac.createOscillator(); const g = ac.createGain();
         o.type = 'sine';
@@ -4815,7 +4773,7 @@ function startBgAudioTrack1() {
         o.start(t); o.stop(t + 0.22);
     }
 
-    // ── Snare helper (filtered noise) ──
+    
     function snare(t, vol) {
         const bufLen = Math.floor(ac.sampleRate * 0.15);
         const buf = ac.createBuffer(1, bufLen, ac.sampleRate);
@@ -4829,7 +4787,7 @@ function startBgAudioTrack1() {
         src.start(t); src.stop(t + 0.16);
     }
 
-    // ── Hi-hat helper ──
+    
     function hihat(t, vol) {
         const bufLen = Math.floor(ac.sampleRate * 0.06);
         const buf = ac.createBuffer(1, bufLen, ac.sampleRate);
@@ -4843,7 +4801,7 @@ function startBgAudioTrack1() {
         src.start(t); src.stop(t + 0.07);
     }
 
-    // ── Drum pattern: 1 bar = 4 beats ──
+    
     function drumBar() {
         if (!_musicNodes) return;
         const now = ac.currentTime;
@@ -4858,8 +4816,8 @@ function startBgAudioTrack1() {
     }
     drumBar();
 
-    // ── Horn/brass melody — heroic E Phrygian, quarter note rhythm ──
-    // E4 F4 G4 E4 / D4 E4 F4 D4 / C4 D4 E4 C4 / B3 C4 D4 E4
+    
+    
     const hornPhrase = [
         [330,0],[349,1],[392,2],[330,3],
         [294,4],[330,5],[349,6],[294,7],
@@ -4887,7 +4845,7 @@ function startBgAudioTrack1() {
     }
     playHorn();
 
-    // ── Tension counter-melody (higher register, every 2 bars) ──
+    
     const counterPhrase = [
         [659,0],[622,2],[587,4],[622,6],
         [659,8],[698,10],[659,12],[587,14]
@@ -4912,13 +4870,12 @@ function startBgAudioTrack1() {
     playCounter();
 }
 
-// ── BATTLE TRACK 2: Void Pulse — dark synth, 100 BPM, pulsing arpeggio + sub ──
 function startBgAudioTrack2() {
     if (muted) return;
     const ac = getAC();
     if (_musicNodes) return;
     const master = ac.createGain();
-    master.gain.setValueAtTime(musicVol * 0.50, ac.currentTime);
+    master.gain.setValueAtTime(musicVol * 0.65, ac.currentTime);
     master.connect(ac.destination);
     _musicNodes = { master, oscs: [], intervals: [] };
 
@@ -4926,20 +4883,20 @@ function startBgAudioTrack2() {
     const beat = 60 / bpm;
     const sixteenth = beat / 4;
 
-    // ── Sub bass: deep sine wave, root C1=32.7Hz ──
+    
     const sub = ac.createOscillator(); const subG = ac.createGain();
     sub.type = 'sine'; sub.frequency.value = 32.7; subG.gain.value = 0.28;
     sub.connect(subG); subG.connect(master);
     sub.start(); _musicNodes.oscs.push(sub);
 
-    // ── Pulse LFO on sub gain — heartbeat feel ──
+    
     const pulseLfo = ac.createOscillator(); const pulseLfoG = ac.createGain();
-    pulseLfo.type = 'sine'; pulseLfo.frequency.value = bpm / 60; // one pulse per beat
+    pulseLfo.type = 'sine'; pulseLfo.frequency.value = bpm / 60; 
     pulseLfoG.gain.value = 0.14;
     pulseLfo.connect(pulseLfoG); pulseLfoG.connect(subG.gain);
     pulseLfo.start(); _musicNodes.oscs.push(pulseLfo);
 
-    // ── Mid drone: detuned pair for width ──
+    
     [[65.4, 0.08, 0], [65.8, 0.06, 1]].forEach(([freq, vol]) => {
         const o = ac.createOscillator(); const g = ac.createGain();
         const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 500;
@@ -4948,13 +4905,13 @@ function startBgAudioTrack2() {
         o.start(); _musicNodes.oscs.push(o);
     });
 
-    // ── Arpeggio: C minor pentatonic up/down, 16th notes ──
-    // C3 Eb3 G3 Bb3 C4 Bb3 G3 Eb3 (repeat, shifting harmony every 2 bars)
+    
+    
     const arpPatterns = [
-        [130.8, 155.6, 196.0, 233.1, 261.6, 233.1, 196.0, 155.6], // C minor
-        [116.5, 138.6, 174.6, 207.7, 233.1, 207.7, 174.6, 138.6], // Bb minor
-        [123.5, 146.8, 185.0, 220.0, 246.9, 220.0, 185.0, 146.8], // B dim
-        [130.8, 155.6, 196.0, 233.1, 261.6, 233.1, 196.0, 155.6], // back to C
+        [130.8, 155.6, 196.0, 233.1, 261.6, 233.1, 196.0, 155.6], 
+        [116.5, 138.6, 174.6, 207.7, 233.1, 207.7, 174.6, 138.6], 
+        [123.5, 146.8, 185.0, 220.0, 246.9, 220.0, 185.0, 146.8], 
+        [130.8, 155.6, 196.0, 233.1, 261.6, 233.1, 196.0, 155.6], 
     ];
     let arpBar = 0;
 
@@ -4981,7 +4938,7 @@ function startBgAudioTrack2() {
     }
     playArp();
 
-    // ── Eerie lead melody: slow, stepwise, chromatic tension ──
+    
     const leadPhrase = [
         [523.3, 0], [493.9, beat*2], [466.2, beat*4], [440.0, beat*6],
         [415.3, beat*8], [392.0, beat*10], [369.9, beat*12], [349.2, beat*14]
@@ -4993,7 +4950,7 @@ function startBgAudioTrack2() {
         leadPhrase.forEach(([freq, t]) => {
             const o = ac.createOscillator(); const g = ac.createGain();
             const lfo2 = ac.createOscillator(); const lfo2G = ac.createGain();
-            lfo2.frequency.value = 5.2; lfo2G.gain.value = 1.5; // vibrato
+            lfo2.frequency.value = 5.2; lfo2G.gain.value = 1.5; 
             lfo2.connect(lfo2G); lfo2G.connect(o.frequency);
             lfo2.start(now + t); lfo2.stop(now + t + beat * 2.2);
             o.type = 'sine'; o.frequency.value = freq;
@@ -5009,7 +4966,7 @@ function startBgAudioTrack2() {
     }
     playLead();
 
-    // ── Electronic kick: every beat with accent on 1 & 3 ──
+    
     function eKick(t, vol) {
         const o = ac.createOscillator(); const g = ac.createGain();
         o.type = 'sine';
@@ -5033,7 +4990,6 @@ function startBgAudioTrack2() {
     kickPattern();
 }
 
-// ── MOD SYSTEM ───────────────────────────────────────────────────────────────
 let _loadedMods = [];
 
 function handleModDrop(event) {
@@ -5051,19 +5007,161 @@ function handleModFileInput(input) {
     input.value = '';
 }
 
+const MOD_CARD_CLASSES = {
+    attack:   { label: 'Attack',   desc: 'Deals direct damage to the opponent.' },
+    heal:     { label: 'Heal',     desc: 'Restores HP to the caster.' },
+    drain:    { label: 'Drain',    desc: 'Steals HP from the opponent.' },
+    debuff:   { label: 'Debuff',   desc: 'Applies a negative status to the opponent.' },
+    buff:     { label: 'Buff',     desc: 'Grants a positive status to the caster.' },
+    reflect:  { label: 'Reflect',  desc: 'Redirects or reflects incoming damage.' },
+    poison:   { label: 'Poison',   desc: 'Applies damage-over-time poison to the opponent.' },
+    burn:     { label: 'Burn',     desc: 'Applies damage-over-time burn to the opponent.' },
+    freeze:   { label: 'Freeze',   desc: "Skips the opponent's turn." },
+    curse:    { label: 'Curse',    desc: "Forces the opponent's next action to fail." },
+    tariff:   { label: 'Tariff',   desc: 'Halves damage dealt by the opponent for a number of turns.' },
+    chain:    { label: 'Chain',    desc: 'On crit, triggers an additional roll.' },
+    pierce:   { label: 'Pierce',   desc: 'Bypasses shields and pets.' },
+    multi:    { label: 'Multi',    desc: 'Hits multiple times per use.' },
+    reroll:   { label: 'Reroll',   desc: 'Grants a free die reroll.' },
+    utility:  { label: 'Utility',  desc: 'Does not fit into a single damage/heal category.' },
+};
+
+let BUILTIN_CARD_IDS = null;
+function _getBuiltinIds() { if (!BUILTIN_CARD_IDS) BUILTIN_CARD_IDS = new Set(Object.values(ALL_CARDS).map(c => c.id)); return BUILTIN_CARD_IDS; }
+
+function _sanitizeMod(mod) {
+    const BLOCKED_KEYS = ['ai','difficulty','settings','aiThink','critMult','berserkerNerf','mechanics','weights'];
+    const clean = {};
+    for (const k of Object.keys(mod)) {
+        if (!BLOCKED_KEYS.includes(k)) clean[k] = mod[k];
+    }
+    return clean;
+}
+
+function _applyModTheme(mod) {
+    if (!mod.theme || typeof mod.theme !== 'object') return;
+    const id = 'mod-theme-' + mod.name.replace(/[^a-z0-9]/gi, '_');
+    const existing = document.getElementById(id);
+    if (existing) existing.remove();
+    const ALLOWED_VARS = [
+        '--gold','--gold-dim','--gold-bright','--rare','--epic','--legendary','--common',
+        '--bg-deep','--bg-mid','--bg-surface','--border-gold','--border-dim',
+        '--text-primary','--text-secondary','--text-dim','--accent','--accent-dim',
+        '--card-bg','--card-border','--card-text','--card-rarity-common','--card-rarity-uncommon',
+        '--card-rarity-rare','--card-rarity-epic','--card-rarity-legendary',
+        '--hp-bar-player','--hp-bar-enemy','--die-face','--die-text',
+        '--btn-bg','--btn-border','--btn-text','--panel-bg','--panel-border',
+    ];
+    const varLines = [];
+    for (const [k, v] of Object.entries(mod.theme)) {
+        if (ALLOWED_VARS.includes(k) && typeof v === 'string' && v.length < 80) {
+            varLines.push(`    ${k}: ${v};`);
+        }
+    }
+    if (varLines.length === 0) return;
+    const style = document.createElement('style');
+    style.id = id;
+    style.textContent = `body {\n${varLines.join('\n')}\n}`;
+    document.head.appendChild(style);
+    if (THEMES.indexOf(mod.name) === -1) THEMES.push(mod.name);
+    if (!mod.theme._skipSwatch) {
+        const picker = document.getElementById('opt-theme-picker');
+        if (picker && !picker.querySelector(`[data-theme="${mod.name}"]`)) {
+            const btn = document.createElement('button');
+            btn.className = 'theme-swatch';
+            btn.dataset.theme = mod.name;
+            btn.title = mod.name;
+            const bg = mod.theme['--accent'] || mod.theme['--gold'] || '#c8a460';
+            btn.style.background = `linear-gradient(135deg, ${bg} 0%, #0d0400 100%)`;
+            btn.innerHTML = `<span class="theme-swatch-label">${mod.name}</span>`;
+            btn.addEventListener('click', function() { playSfx('menuClick'); selectTheme(mod.name); });
+            picker.appendChild(btn);
+        }
+    }
+}
+
+function _removeModTheme(mod) {
+    const id = 'mod-theme-' + mod.name.replace(/[^a-z0-9]/gi, '_');
+    const el = document.getElementById(id);
+    if (el) el.remove();
+    const idx = THEMES.indexOf(mod.name);
+    if (idx > -1) THEMES.splice(idx, 1);
+    const picker = document.getElementById('opt-theme-picker');
+    if (picker) { const btn = picker.querySelector(`[data-theme="${mod.name}"]`); if (btn) btn.remove(); }
+    if (_currentTheme === mod.name) applyTheme('default');
+}
+
+function _applyModVisuals(mod) {
+    if (!mod.visuals || typeof mod.visuals !== 'object') return;
+    const id = 'mod-visuals-' + mod.name.replace(/[^a-z0-9]/gi, '_');
+    const existing = document.getElementById(id);
+    if (existing) existing.remove();
+    const ALLOWED_SELECTORS = {
+        'body-bg':        { sel: 'body',              props: ['background','background-color'] },
+        'panel-bg':       { sel: '.panel',             props: ['background','border-color'] },
+        'card-bg':        { sel: '.hand-card',         props: ['background','border-color','color'] },
+        'btn-style':      { sel: '.btn',               props: ['background','border-color','color'] },
+        'hp-bar-player':  { sel: '#hp-bar-p .hp-fill', props: ['background'] },
+        'hp-bar-enemy':   { sel: '#hp-bar-a .hp-fill', props: ['background'] },
+        'title-color':    { sel: '#game-title',        props: ['color','text-shadow'] },
+        'overlay-bg':     { sel: '.overlay',           props: ['background'] },
+        'tooltip-bg':     { sel: '.tooltip',           props: ['background','border-color','color'] },
+    };
+    const cssLines = [];
+    for (const [key, val] of Object.entries(mod.visuals)) {
+        const rule = ALLOWED_SELECTORS[key];
+        if (!rule || typeof val !== 'object') continue;
+        const decls = [];
+        for (const [prop, v] of Object.entries(val)) {
+            if (rule.props.includes(prop) && typeof v === 'string' && v.length < 120) {
+                decls.push(`${prop}: ${v};`);
+            }
+        }
+        if (decls.length) cssLines.push(`${rule.sel} { ${decls.join(' ')} }`);
+    }
+    if (cssLines.length === 0) return;
+    const style = document.createElement('style');
+    style.id = id;
+    style.textContent = cssLines.join('\n');
+    document.head.appendChild(style);
+}
+
+function _removeModVisuals(mod) {
+    const id = 'mod-visuals-' + mod.name.replace(/[^a-z0-9]/gi, '_');
+    const el = document.getElementById(id);
+    if (el) el.remove();
+}
+
 function loadModFile(file) {
     if (!file.name.endsWith('.json')) { showModError('Only .json mod files are supported.'); return; }
     const reader = new FileReader();
     reader.onload = (e) => {
         try {
-            const mod = JSON.parse(e.target.result);
-            if (!mod.name) { showModError('Invalid mod: missing "name" field.'); return; }
-            if (_loadedMods.find(m => m.name === mod.name)) {
-                showModError(`Mod "${mod.name}" is already loaded.`); return;
+            const rawMod = JSON.parse(e.target.result);
+            if (!rawMod.name) { showModError('Invalid mod: missing "name" field.'); return; }
+            if (_loadedMods.find(m => m.name === rawMod.name)) {
+                showModError(`Mod "${rawMod.name}" is already loaded.`); return;
+            }
+            const mod = _sanitizeMod(rawMod);
+            if (Array.isArray(mod.cards)) {
+                for (const c of mod.cards) {
+                    if (c.id == null) continue;
+                    if (_getBuiltinIds().has(c.id)) {
+                        showModError(`ID conflict: card ID ${c.id} ("${c.n || '?'}") collides with a built-in card.`);
+                        return;
+                    }
+                    for (const loaded of _loadedMods) {
+                        if (Array.isArray(loaded.cards) && loaded.cards.some(lc => lc.id === c.id)) {
+                            showModError(`ID conflict: card ID ${c.id} ("${c.n || '?'}") already used by mod "${loaded.name}".`);
+                            return;
+                        }
+                    }
+                }
             }
             _loadedMods.push(mod);
             applyMod(mod);
             renderModList();
+            try { const mk = 'dr_saved_mods'; localStorage.setItem(mk, JSON.stringify(_loadedMods)); } catch(e) {}
         } catch(err) {
             showModError('Failed to parse mod file: ' + err.message);
         }
@@ -5075,11 +5173,13 @@ function applyMod(mod) {
     if (Array.isArray(mod.cards)) {
         mod.cards.forEach(c => {
             if (c.id != null && c.n && c.i && c.d) {
-                if (typeof ALL_CARDS !== 'undefined') {
-                    ALL_CARDS['mod_' + c.id] = { ...c, _fromMod: mod.name };
-                }
+                const validClass = c.class && MOD_CARD_CLASSES[c.class] ? c.class : 'utility';
+                const multiplier = (typeof c.multiplier === 'number' && c.multiplier > 0 && c.multiplier <= 5)
+                    ? c.multiplier : 1.0;
+                const card = { ...c, class: validClass, multiplier, _fromMod: mod.name };
+                if (typeof ALL_CARDS !== 'undefined') ALL_CARDS['mod_' + c.id] = card;
                 const existing = CARDS.find(x => x.id === c.id);
-                if (!existing) CARDS.push({ ...c, _fromMod: mod.name });
+                if (!existing) CARDS.push(card);
             }
         });
     }
@@ -5094,7 +5194,8 @@ function applyMod(mod) {
         });
         buildDeckUI();
     }
-    console.log(`[Mods] Applied mod: ${mod.name}`);
+    _applyModTheme(mod);
+    _applyModVisuals(mod);
 }
 
 function unloadMod(name) {
@@ -5109,7 +5210,6 @@ function unloadMod(name) {
             if (ci >= 0) CARDS.splice(ci, 1);
         });
     }
-    // Remove injected decks
     if (Array.isArray(mod.decks)) {
         mod.decks.forEach(d => {
             const di = DECKS.findIndex(x => x.id === d.id && x._fromMod === name);
@@ -5117,6 +5217,8 @@ function unloadMod(name) {
         });
         buildDeckUI();
     }
+    _removeModTheme(mod);
+    _removeModVisuals(mod);
     _loadedMods.splice(idx, 1);
     renderModList();
 }
@@ -5126,22 +5228,28 @@ function renderModList() {
     if (!list) return;
     list.innerHTML = '';
     if (_loadedMods.length === 0) {
-        list.innerHTML = '<div style="font-family:\'IM Fell English\',serif; font-size:11px; color:#4a3010; font-style:italic; text-align:center; padding:8px 0;">No mods loaded</div>';
+        list.innerHTML = '<div style="font-family:'IM Fell English',serif; font-size:11px; color:#4a3010; font-style:italic; text-align:center; padding:8px 0;">No mods loaded</div>';
         return;
     }
     _loadedMods.forEach(mod => {
         const el = document.createElement('div');
         el.style.cssText = 'display:flex; align-items:center; justify-content:space-between; background:rgba(20,10,2,0.85); border:1px solid rgba(100,65,20,0.5); border-radius:5px; padding:8px 12px;';
+        const cardCount = Array.isArray(mod.cards) ? mod.cards.length : 0;
+        const deckCount = Array.isArray(mod.decks) ? mod.decks.length : 0;
+        const extras = [
+            cardCount > 0 ? cardCount + ' card(s)' : null,
+            deckCount > 0 ? deckCount + ' deck(s)' : null,
+            mod.theme ? 'custom theme' : null,
+            mod.visuals ? 'visuals' : null,
+        ].filter(Boolean).join(' · ');
         el.innerHTML = `
             <div>
                 <div style="font-family:'Cinzel',serif; font-size:11px; color:#c8a460; letter-spacing:1px;">${mod.name}</div>
                 <div style="font-family:'IM Fell English',serif; font-size:10px; color:#5a3a10; font-style:italic; margin-top:2px;">
-                    ${mod.version ? 'v' + mod.version + ' · ' : ''}
-                    ${mod.cards ? mod.cards.length + ' card(s)' : ''}
-                    ${mod.decks ? ' · ' + mod.decks.length + ' deck(s)' : ''}
+                    ${mod.version ? 'v' + mod.version + ' · ' : ''}${extras}
                 </div>
             </div>
-            <button onclick="unloadMod('${mod.name.replace(/'/g,"\\'")}');" style="font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; background:rgba(40,10,5,0.9); border:1px solid rgba(120,40,30,0.5); color:rgba(200,70,50,0.8); padding:4px 10px; cursor:pointer; border-radius:3px; text-transform:uppercase;">Unload</button>`;
+            <button onclick="unloadMod('${mod.name.replace(/'/g,"\'")}');" style="font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; background:rgba(40,10,5,0.9); border:1px solid rgba(120,40,30,0.5); color:rgba(200,70,50,0.8); padding:4px 10px; cursor:pointer; border-radius:3px; text-transform:uppercase;">Unload</button>`;
         list.appendChild(el);
     });
 }
@@ -5150,10 +5258,10 @@ function showModError(msg) {
     const list = document.getElementById('mod-list');
     if (!list) return;
     const el = document.createElement('div');
-    el.style.cssText = 'font-family:\'IM Fell English\',serif; font-size:11px; color:#c62828; font-style:italic; text-align:center; padding:6px 0;';
+    el.style.cssText = "font-family:'IM Fell English',serif; font-size:11px; color:#c62828; font-style:italic; text-align:center; padding:6px 0;";
     el.textContent = msg;
     list.prepend(el);
-    setTimeout(() => { if (el.parentNode) el.remove(); }, 3000);
+    setTimeout(() => { if (el.parentNode) el.remove(); }, 4000);
 }
 
 function aiThinkMult() {
@@ -5170,15 +5278,15 @@ function toggleMute() {
         if (_customAudioEl) _customAudioEl.pause();
     } else {
         if (_musicNodes) {
-            // procedural music nodes exist — just restore volume
-            _musicNodes.master.gain.setValueAtTime(musicVol * 0.55, AC.currentTime);
+            
+            _musicNodes.master.gain.setValueAtTime(musicVol * 0.72, AC.currentTime);
         } else if (_menuMusicNodes) {
             _menuMusicNodes.master.gain.setValueAtTime(musicVol * 0.5, AC.currentTime);
         } else if (_battleTrack === 99 || _menuTrack === 99) {
-            // custom audio track selected
+            
             startCustomAudio();
         } else {
-            // no nodes at all — restart appropriate track
+            
             const onBattle = document.getElementById('board')?.style.display === 'block';
             if (onBattle) startBgAudio(); else startMenuAudio();
         }
@@ -5186,20 +5294,15 @@ function toggleMute() {
 }
 document.getElementById('mute-btn').addEventListener('click', toggleMute);
 
-// Start menu music on first user interaction (browser autoplay policy)
 function _bootMenuMusic() {
-    if (window._introMusicSuppressed) return; // intro is still showing
+    if (window._introMusicSuppressed) return; 
     document.removeEventListener('pointerdown', _bootMenuMusic);
     document.removeEventListener('keydown', _bootMenuMusic);
-    if (_menuMusicNodes || _musicNodes) return; // already started
+    if (_menuMusicNodes || _musicNodes) return; 
     try { startMenuAudio(); } catch(e) {}
 }
 document.addEventListener('pointerdown', _bootMenuMusic);
 document.addEventListener('keydown', _bootMenuMusic);
-
-/* ══════════════════════════════════════
-   CARDS — 6 total (Block replaced + 2 new)
-══════════════════════════════════════ */
 
 const ALL_CARDS = {
     attack:  { id:0,  n:"Attack",   i:"⚔️",  rarity:"common",    d:"Deals damage. Crits chain into a free second roll.",           m:"CRIT: +Chain | FAIL: Self-Strike" },
@@ -5222,7 +5325,7 @@ const ALL_CARDS = {
     bone:    { id:18, n:"Bone",     i:"🦴",  rarity:"common",    d:"Low damage but never fully misses. Always deals at least 1.",         m:"CRIT: Bone storm | FAIL: Safe (1 dmg)" },
     soul:    { id:19, n:"Soul",     i:"👻",  rarity:"legendary", d:"Massive damage. Backfires for 10 self-damage on a fail.",       m:"CRIT: Soul shatter | FAIL: Possess self (10 dmg)" },
 
-    // ── SIREN DECK CARDS (ids 20–25) ──
+    
     lullaby:  { id:20, n:"Lullaby",   i:"🎵",  rarity:"uncommon",  d:"Skips the opponent's next turn. Fails and you skip yours.",         m:"CRIT: Sleep 2 turns | FAIL: Self-daze (skip own turn)" },
     aria:     { id:21, n:"Aria",      i:"🎶",  rarity:"rare",      d:"Deals double damage on a crit. Costs 4 HP on a fail.",                      m:"CRIT: x2 dmg | FAIL: Voice crack (self 4 dmg)" },
     serenade: { id:22, n:"Serenade",  i:"🌊",  rarity:"common",    d:"Applies tariff — halves opponent damage for 2 turns.",                     m:"CRIT: Disarming charm (tariff debuff) | FAIL: Safe" },
@@ -5230,7 +5333,7 @@ const ALL_CARDS = {
     chorus:   { id:24, n:"Chorus",    i:"🎤",  rarity:"uncommon",  d:"Shields you this turn. Crit also adds 2 turns of regen.",                     m:"CRIT: Sonic barrier (shield + regen) | FAIL: Safe" },
     encore:   { id:25, n:"Encore",    i:"🌹",  rarity:"legendary", d:"Big drain and self-heal. Crits amplify both. Risky fail.",                                 m:"CRIT: Triple echo | FAIL: Encore fails twice (self 8 dmg)" },
 
-    // ── BARD DECK CARDS (ids 26–31) ──
+    
     strum:     { id:26, n:"Strum",     i:"🎸",  rarity:"common",    d:"Standard attack. Crits chain into a free second roll.",                                            m:"CRIT: Power chord (chain) | FAIL: Break string (self 3 dmg)" },
     drumroll:  { id:27, n:"Drumroll",  i:"🥁",  rarity:"uncommon",  d:"Hits twice. Crits hit three times. Fails waste the turn.",                 m:"CRIT: Triple strike | FAIL: Miss the beat (wasted turn)" },
     shanty:    { id:28, n:"Shanty",    i:"⚓",  rarity:"rare",      d:"Applies regen — heals 3 HP/turn for 3 turns. Safe card.",                  m:"CRIT: 5 HP/turn for 3 turns | FAIL: Grim shanty (lose HP)" },
@@ -5238,25 +5341,25 @@ const ALL_CARDS = {
     ballad:    { id:30, n:"Ballad",    i:"📯",  rarity:"epic",      d:"Curses the opponent. Crits also debuff damage. Risky fail.",                           m:"CRIT: Curse 2 turns + tariff | FAIL: Cursed by own verse" },
     crescendo: { id:31, n:"Crescendo", i:"🎺",  rarity:"legendary", d:"Damage scales up with each crit in the chain. Gamble it.",                             m:"CRIT: Escalating blast | FAIL: Anticlimactic (self 6 dmg)" },
 
-    // ── IRON VANGUARD DECK CARDS (ids 32–35) ──
+    
     bulwark:   { id:32, n:"Bulwark",   i:"🏰",  rarity:"uncommon",  d:"Raise fortress walls — shield self and reduce tariff duration by 1.",           m:"CRIT: Also heal 4 HP | FAIL: Safe" },
     cleave:    { id:33, n:"Cleave",    i:"🪓",  rarity:"rare",      d:"Heavy swing — deals high melee damage. Crits chain.",                          m:"CRIT: Cleave chain | FAIL: Overswing (self 5 dmg)" },
     rally:     { id:34, n:"Rally",     i:"🚩",  rarity:"epic",      d:"Banner cry — cures poison/burn on self and grants 3 turns of regen.",          m:"CRIT: Regen 5 HP/turn | FAIL: Safe" },
     destrier:  { id:35, n:"Destrier",  i:"🐴",  rarity:"legendary", d:"Mounted charge — massive damage that ignores pet and shields. Risky fail.",    m:"CRIT: Crushing charge (chain) | FAIL: Unhorsed (self 10 dmg)" },
 
-    // ── FOREST WARDEN DECK CARDS (ids 36–39) ──
+    
     volley:    { id:36, n:"Volley",    i:"🪃",  rarity:"common",    d:"Loose a volley — hits twice. Crits hit a third time.",                         m:"CRIT: Third arrow | FAIL: Self-nick (self 2 dmg)" },
     huntmark:  { id:37, n:"Huntmark",  i:"🦅",  rarity:"uncommon",  d:"Mark the quarry — opponent's next card deals 2 less damage.",                  m:"CRIT: Marked for 3 turns | FAIL: Safe" },
     bramble:   { id:38, n:"Bramble",   i:"🌿",  rarity:"rare",      d:"Entangle the foe — freeze them 1 turn and poison 2 dmg/turn for 2 turns.",     m:"CRIT: Freeze 2 turns + stronger poison | FAIL: Ensnared self (freeze 1)" },
     hawkstrike:{ id:39, n:"Hawkstrike",i:"🦆",  rarity:"epic",      d:"Dive-bomb strike — bypasses shields. Crits also poison 3 dmg/turn.",           m:"CRIT: Pierce + poison | FAIL: Miss (self 3 dmg)" },
 
-    // ── PLAGUE HERALD DECK CARDS (ids 40–43) ──
+    
     miasma:    { id:40, n:"Miasma",    i:"🫧",  rarity:"uncommon",  d:"Toxic cloud — poisons enemy 4 dmg/turn for 3 turns. Safe card.",               m:"CRIT: 6 dmg/turn poison | FAIL: Safe" },
     necrosis:  { id:41, n:"Necrosis",  i:"🦠",  rarity:"rare",      d:"Rotting wound — deals immediate damage and inflicts burn for 2 turns.",         m:"CRIT: Also poisons for 2 turns | FAIL: Infect self (self 4 dmg)" },
     contagion: { id:42, n:"Contagion", i:"💀",  rarity:"epic",      d:"Spreading sickness — applies both poison AND burn simultaneously.",             m:"CRIT: Extended duration | FAIL: Outbreak on self" },
     pandemic:  { id:43, n:"Pandemic",  i:"⚗️",  rarity:"legendary", d:"The Black Death — poisons 5 dmg/turn for 5 turns. Devastating fail.",          m:"CRIT: Immediate 10 dmg + pandemic | FAIL: Self-inflict pandemic" },
 
-    // ── GILDED THRONE DECK CARDS (ids 44–46) ──
+    
     decree:    { id:44, n:"Decree",    i:"📋",  rarity:"uncommon",  d:"Royal decree — applies tariff on the enemy for 3 turns. Safe card.",            m:"CRIT: Tariff 5 turns | FAIL: Safe" },
     tithe:     { id:45, n:"Tithe",     i:"💎",  rarity:"rare",      d:"Collect tribute — drains enemy HP and heals self for each turn of tariff active.",m:"CRIT: Mega-drain + regen | FAIL: Safe" },
     inquisitor:{ id:46, n:"Inquisitor",i:"⚖️",  rarity:"epic",      d:"Judgment — curses the enemy and halves their damage for 2 turns.",              m:"CRIT: Curse 2 turns + tariff 3 turns | FAIL: Condemned self" },
@@ -5363,13 +5466,12 @@ const DECKS = [
 
 let selectedDeckId = 'standard';
 
-// ── CUSTOM DECK BUILDER ──────────────────────────────────
 let customDeckSelection = [];
 let customDeckLogo = '⚔️';
 
 const LOGO_EMOJIS = ['⚔️','🦇','🧪','📜','🪞','☠️','🐉','💣','🛡️','⚡','🔮','🌿','🏹','🩸','🔥','❄️','💰','🦴','👻','💀','🃏','👑','🌑','🎭','🎲','🔱','⚗️','🗡️','🌙','✦'];
 
-let _editingDeckId = null; // null = new deck, string = editing existing
+let _editingDeckId = null; 
 
 function openCustomDeckBuilder(existingDeck) {
     customDeckSelection = [];
@@ -5496,7 +5598,6 @@ function showShareMsg(msg, isError) {
     setTimeout(() => { el.style.opacity = '0'; }, 2200);
 }
 
-// ── DECK ENCODE / DECODE ──
 function encodeDeck(deck) {
     try {
         const payload = { v: 1, n: deck.name, d: deck.desc, i: deck.icon, c: deck.cards };
@@ -5773,9 +5874,6 @@ const CARDS = [
     { id:46, n:"Inquisitor",i:"⚖️",  rarity:"epic",      d:"Judgment — curses the enemy and halves their damage for 2 turns.", m:"CRIT: Curse 2 turns + tariff 3 turns | FAIL: Condemned self" },
 ];
 
-/* ══════════════════════════════════════
-   STATE
-══════════════════════════════════════ */
 let state = {
     pHP: 75, aHP: 75, pHand: [],
     turn: true,
@@ -5791,9 +5889,6 @@ let state = {
     pGoldRerolls: 0, aGoldRerolls: 0,
 };
 
-/* ══════════════════════════════════════
-   OPTIONS HELPERS
-══════════════════════════════════════ */
 const opt = id => document.getElementById(id)?.checked ?? true;
 function animSpeed() {
     const v = parseFloat(document.getElementById('opt-speed')?.value ?? '1');
@@ -5803,7 +5898,7 @@ function delay(ms) { return new Promise(r => setTimeout(r, _skipRequested ? 0 : 
 function toggle(id, s) { document.getElementById(id).style.display = s ? 'flex' : 'none'; }
 
 async function initGame() {
-    // Hide update log when a match starts
+    
     const clPanel = document.getElementById('changelog-panel');
     if (clPanel) clPanel.style.opacity = '0';
 
@@ -5811,12 +5906,12 @@ async function initGame() {
     if (_menuMusicNodes) {
         const ac2 = getAC();
         const nodes = _menuMusicNodes;
-        _menuMusicNodes = null; // null immediately to block re-entry
+        _menuMusicNodes = null; 
         nodes.master.gain.linearRampToValueAtTime(0, ac2.currentTime + 1.2);
         nodes.intervals.forEach(t => clearTimeout(t));
         setTimeout(() => {
             nodes.oscs.forEach(o => { try { o.stop(); } catch(e){} });
-            if (!_musicNodes) { try { startBgAudio(); } catch(e) {} } // guard double-start
+            if (!_musicNodes) { try { startBgAudio(); } catch(e) {} } 
         }, 1200);
     } else {
         if (!_musicNodes) { try { startBgAudio(); } catch(e) {} }
@@ -5847,7 +5942,7 @@ function returnToMenu() {
     if (_musicNodes) {
         const ac2 = getAC();
         const nodes = _musicNodes;
-        _musicNodes = null; // null immediately to block re-entry
+        _musicNodes = null; 
         nodes.master.gain.linearRampToValueAtTime(0, ac2.currentTime + 1.2);
         nodes.intervals.forEach(t => clearTimeout(t));
         setTimeout(() => {
@@ -5862,12 +5957,12 @@ function returnToMenu() {
     document.getElementById('mute-btn').classList.remove('visible');
     document.getElementById('forfeit-btn').classList.remove('visible');
     toggle('menu-main', true);
-    // Re-reconcile visual settings that may have drifted during the game
+    
     applyGraphicsQuality(_graphicsQuality);
     applyCardDark(_cardDark);
     applyRarityGlow();
     applyHighContrast();
-    // Re-show changelog panel if setting is on
+    
     const _clPanel = document.getElementById('changelog-panel');
     if (_clPanel) {
         const _clEnabled = document.getElementById('opt-update-log')?.checked ?? true;
@@ -5876,12 +5971,12 @@ function returnToMenu() {
 }
 
 function rematch() {
-    closeForfeitPopup(); // ensure popup isn't open from previous game
+    closeForfeitPopup(); 
     toggle('screen-end', false);
 
     stopBgAudio();
     if (_customAudioEl) { _customAudioEl.pause(); _customAudioEl.src = ''; _customAudioEl = null; }
-    _musicNodes = null; // ensure clean slate before restart
+    _musicNodes = null; 
     setTimeout(() => { try { startBgAudio(); } catch(e) {} }, 350);
 
     state = { pHP: 75, aHP: 75, pHand: [], turn: true,
@@ -5928,27 +6023,27 @@ function confirmForfeit() {
     if (_gameOverFired) return;
     _forfeited = true;
     if (_aiActTimer) { clearTimeout(_aiActTimer); _aiActTimer = null; }
-    // Deal 100 damage directly to player HP, bypassing pet
+    
     state.pHP = -100;
-    updateHUD(); // triggers game over via the <=0 check inside updateHUD
+    updateHUD(); 
 }
 
 function drawCard(forceAttack) {
     const deck = getActiveDeck();
     const cardKeys = deck.cards;
-    let weights = [...deck.weights]; // copy so we don't mutate original
+    let weights = [...deck.weights]; 
 
-    // Berserker nerf: when enabled, reduce the probability of high-aggro cards
-    // by compressing the early weights upward (making aggressive cards less likely)
+    
+    
     const berserkerNerf = document.getElementById('opt-berserker-nerf')?.checked ?? false;
     if (berserkerNerf && deck.id === 'berserker') {
-        // Shift weights so aggro cards (bomb, storm, soul) appear ~35% less often
+        
         weights = weights.map((w, i) => {
             const prev = i === 0 ? 0 : weights[i-1];
             const span = w - prev;
             return (i === 0 ? 0 : weights[i-1]) + span * (i < 3 ? 1.35 : 0.75);
         });
-        // Re-normalise to 1.0
+        
         const last = weights[weights.length - 1];
         weights = weights.map(w => Math.min(w / last, 1.0));
     }
@@ -5958,18 +6053,18 @@ function drawCard(forceAttack) {
         const aggro = cardKeys.find(k => [0,8,10,13,15,21,23,25,26,27,31].includes(ALL_CARDS[k].id));
         if (aggro) return ALL_CARDS[aggro];
     }
-    // Always normalise so the last weight is exactly 1.0 — guards against floating point
-    // drift in custom decks or berserker nerf remapping leaving the tail < 1.0
+    
+    
     if (weights.length > 0 && weights[weights.length - 1] !== 1.0) {
         const last = weights[weights.length - 1];
         if (last > 0) weights = weights.map(w => w / last);
-        weights[weights.length - 1] = 1.0; // clamp final entry exactly
+        weights[weights.length - 1] = 1.0; 
     }
     const r = Math.random();
     for (let i = 0; i < weights.length; i++) {
         if (r < weights[i]) return ALL_CARDS[cardKeys[i]];
     }
-    // Fallback: return last card in deck (not first) so distribution bias stays near the tail
+    
     return ALL_CARDS[cardKeys[cardKeys.length - 1] ?? cardKeys[0]];
 }
 
@@ -6014,7 +6109,6 @@ function render() {
     updateHUD();
 }
 
-// screen shake - intensity controls how hard it shakes
 async function shake(intensity = 12) {
     if (!opt('opt-shake') || opt('opt-reduced')) return;
     const c = document.getElementById('game-container');
@@ -6037,7 +6131,6 @@ async function flashScreen(color = 'white', dur = 80) {
     f.style.opacity = '0';
 }
 
-// chromatic aberration hit effect
 async function chromaImpact() {
     if (!opt('opt-shake') || opt('opt-reduced')) return;
     const gc = document.getElementById('game-container');
@@ -6054,9 +6147,6 @@ function spawnCritRing() {
     setTimeout(() => r.remove(), 700);
 }
 
-/* ══════════════════════════════════════
-   PARTICLES
-══════════════════════════════════════ */
 function spawnParticles(x, y, count, colors, spread = 80) {
     if (!opt('opt-particles') || opt('opt-reduced')) return;
     if (_graphicsQuality === 'low')  count = Math.floor(count * 0.4);
@@ -6091,9 +6181,6 @@ function spawnImpactRing(x, y, color = '#ffd700') {
     setTimeout(() => r.remove(), 600);
 }
 
-/* ══════════════════════════════════════
-   POPUPS
-══════════════════════════════════════ */
 function showCritPopup(chainCount) {
     if (!opt('opt-critpop') || opt('opt-reduced')) return;
     const gc = document.getElementById('game-container');
@@ -6129,15 +6216,10 @@ function showNumber(value, isHeal, toP, isCrit = false) {
     setTimeout(() => el.remove(), 1100);
 }
 
-/* ══════════════════════════════════════
-   3D DIE — ROLL + PAUSE ON RESULT
-══════════════════════════════════════ */
-
-// die spin vars - driven by rAF so the CSS animation never gets involved
 let _dieSpinning = false;
 let _dieRx = 0, _dieRy = 0, _dieRz = 0;
 let _dieVx = 4.2, _dieVy = 5.7, _dieVz = 2.1;
-let _forcedRoll = 0; // curse/gold override
+let _forcedRoll = 0; 
 
 function _spinLoop() {
     if (!_dieSpinning) return;
@@ -6149,7 +6231,6 @@ function _spinLoop() {
     requestAnimationFrame(_spinLoop);
 }
 
-// Final resting transforms per face value (brings that face to the front)
 const FACE_RESTING = {
     1: 'rotateX(0deg) rotateY(0deg)',
     2: 'rotateX(-90deg) rotateY(0deg)',
@@ -6259,7 +6340,7 @@ async function hideDie() {
 
 async function playerAct(i) {
     if (!state.turn) return;
-    // Expire any leftover gold rerolls from a previous turn
+    
     state.pGoldRerolls = 0;
     showSkipBtn(false);
     if (state.pFreeze > 0) {
@@ -6285,7 +6366,7 @@ async function playerAct(i) {
         _forcedRoll = 1;
     }
     await resolve(c, true);
-    state.aShield = false; // AI shield expires after player's full turn resolves
+    state.aShield = false; 
     if (state.aTariff > 0) state.aTariff--;
     if (state.aHP > 0 && state.pHP > 0 && !_gameOverFired) _aiActTimer = setTimeout(aiAct, 1200);
     showSkipBtn(false);
@@ -6294,9 +6375,9 @@ async function playerAct(i) {
 
 async function aiAct() {
     if (_forfeited || _gameOverFired) return;
-    // Expire any leftover gold rerolls from a previous turn (e.g. AI was frozen)
+    
     state.aGoldRerolls = 0;
-    // ── per-turn status ticks ──
+    
     if (state.pPoison > 0) {
         const pd = state.pPoisonDmg || 3; state.pHP -= pd; state.pPoison--;
         achStats._totalPoisonBurnStacks = (achStats._totalPoisonBurnStacks || 0) + pd;
@@ -6352,7 +6433,7 @@ async function aiAct() {
     }
     const chosenIdx = Math.floor(Math.random() * 5);
     const chosenBack = backs[chosenIdx];
-    const c = drawCard(false); // AI draws randomly — no forced attack card
+    const c = drawCard(false); 
 
     if (chosenBack) {
         chosenBack.style.transition = 'transform 0.35s cubic-bezier(0.4,0,0.2,1)';
@@ -6389,7 +6470,7 @@ async function aiAct() {
         playSfx('aiReveal');
         revealed.style.transform = 'scale(1.05) rotateY(0deg)';
         revealed.style.transition = 'transform 0.3s cubic-bezier(0.34,1.4,0.64,1)';
-        await delay(700); // pause so player can read it
+        await delay(700); 
 
         revealed.style.transition = 'transform 0.3s ease-in, opacity 0.3s ease-in';
         revealed.style.transform = 'translateY(-30px) scale(0.9)';
@@ -6399,14 +6480,13 @@ async function aiAct() {
     }
 
     await resolve(c, false);
-    state.pShield = false; // Player shield expires after AI's full turn resolves
+    state.pShield = false; 
     if (state.pTariff > 0) state.pTariff--;
     while (state.pHand.length < 5) state.pHand.push(drawCard(state.pHand.length === 4));
     state.turn = true;
     render();
 }
 
-/* ---- resolve card ---- */
 async function resolve(card, isP) {
     playSfx('play');
     if (isP) trackCardPlayed(card.id, true);
@@ -6414,7 +6494,7 @@ async function resolve(card, isP) {
     let total = 0, chain = 0;
     const gc = document.getElementById('game-container');
 
-    const canFail = ![2, 9, 6, 4, 18, 22, 24, 28, 32, 34, 37, 40, 44, 45].includes(card.id); // safe cards never fail
+    const canFail = ![2, 9, 6, 4, 18, 22, 24, 28, 32, 34, 37, 40, 44, 45].includes(card.id); 
 
     do {
         const roll = await rollDie3D(isP);
@@ -6469,7 +6549,7 @@ async function resolve(card, isP) {
     const originY = isP ? 580 : 135;
 
     if (total === 0) {
-        /* FAIL — backfires with card-specific damage */
+        
         const failDmgMap = { 8: 8, 19: 10, 10: 6, 5: 0, 2: 0, 14: 0, 11: 0, 20: 0, 21: 4, 22: 0, 23: 8, 24: 0, 25: 8, 26: 3, 27: 0, 28: 0, 29: 0, 30: 0, 31: 6, 32: 0, 33: 5, 34: 0, 35: 10, 36: 2, 37: 0, 38: 0, 39: 3, 40: 0, 41: 4, 42: 6, 43: 8, 44: 0, 45: 0, 46: 0, 12: 4, 3: 0, 16: 0, 17: 6 };
         const failDmg = failDmgMap.hasOwnProperty(card.id) ? failDmgMap[card.id] : 4;
         obj.textContent = card.i;
@@ -6548,7 +6628,7 @@ async function resolve(card, isP) {
     } else {
         switch (card.id) {
 
-            case 0: { /* ATTACK */
+            case 0: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,100,30,1)');
                 obj.textContent = '⚔️';
@@ -6595,7 +6675,7 @@ async function resolve(card, isP) {
                     showNumber(d, false, false, chain > 0);
                     if (state.aHP <= 0 && preHP > 0) checkAchs({ won: true });
                 } else {
-                    d = total + 3; // AI deals slightly less base damage
+                    d = total + 3; 
                     if (state.pTariff > 0) d = Math.floor(d * 0.5);
                     if (state.pShield) { d = Math.floor(d * 0.4); state.pShield = false; }
                     dmg(d, true);
@@ -6606,7 +6686,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 5: { /* VAMPIRE — drain */
+            case 5: { 
                 playSfx('vampire');
                 const drainAmt = Math.floor(total * 1.2 + 4);
                 obj.textContent = '🦇';
@@ -6621,7 +6701,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 2: { /* HEAL */
+            case 2: { 
                 playSfx('heal');
                 if (isP && chain > 0) checkAchs({ critOnHeal: true });
                 obj.textContent = '✨';
@@ -6635,7 +6715,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 3: { /* TARIFF */
+            case 3: { 
                 playSfx('tariff');
                 obj.textContent = '📜';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -6647,7 +6727,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 6: { /* MIRROR */
+            case 6: { 
                 playSfx('mirror');
                 obj.textContent = '🪞';
                 obj.style.cssText = 'position:absolute;font-size:64px;left:' + (isP?'12%':'78%') + ';top:' + (isP?'55%':'10%') + ';transition:opacity 0.5s;opacity:1;';
@@ -6662,7 +6742,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 7: { /* PLAGUE */
+            case 7: { 
                 playSfx('plague');
                 obj.textContent = '☠️';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -6678,7 +6758,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 4: { /* PET */
+            case 4: { 
                 playSfx('pet');
                 obj.textContent = '🐉';
                 obj.style.cssText = 'position:absolute;font-size:64px;left:' + (isP?'12%':'78%') + ';top:' + (isP?'55%':'10%') + ';transition:opacity 0.5s;opacity:1;';
@@ -6693,7 +6773,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 8: { /* BOMB — big damage, self-destruct on fail */
+            case 8: { 
                 playSfx('attack');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,160,0,1)');
                 obj.textContent = '💣';
@@ -6734,7 +6814,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 9: { /* SHIELD — reduce incoming damage this turn */
+            case 9: { 
                 playSfx('mirror');
                 obj.textContent = '🛡️';
                 obj.style.cssText = 'position:absolute;font-size:64px;left:' + (isP?'12%':'78%') + ';top:' + (isP?'55%':'10%') + ';transition:opacity 0.5s;opacity:1;';
@@ -6749,7 +6829,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 10: { /* STORM — strikes twice */
+            case 10: { 
                 playSfx('attackSwing');
                 obj.textContent = '⚡';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -6792,7 +6872,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 11: { /* CURSE — next card auto-fails */
+            case 11: { 
                 playSfx('tariff');
                 obj.textContent = '🔮';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -6805,7 +6885,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 12: { /* REGEN — heal over time */
+            case 12: { 
                 playSfx('heal');
                 obj.textContent = '🌿';
                 obj.classList.add(isP ? 'f-heal-p' : 'f-heal-a');
@@ -6818,7 +6898,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 13: { /* SNIPE — bypasses pet and shield */
+            case 13: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(200,220,255,1)');
                 obj.textContent = '🏹';
@@ -6843,7 +6923,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 14: { /* LEECH — small reliable drain */
+            case 14: { 
                 playSfx('vampire');
                 obj.textContent = '🩸';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -6859,7 +6939,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 15: { /* INFERNO — burn DoT */
+            case 15: { 
                 playSfx('attack');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,80,0,1)');
                 obj.textContent = '🔥';
@@ -6876,7 +6956,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 16: { /* FROST — freeze opponent (skip turn) */
+            case 16: { 
                 playSfx('mirror');
                 obj.textContent = '❄️';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -6890,7 +6970,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 17: { /* GOLD — free reroll(s) on next die */
+            case 17: { 
                 playSfx('crit');
                 obj.textContent = '💰';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:38%;';
@@ -6914,7 +6994,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 18: { /* BONE — low damage, never fails */
+            case 18: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(220,200,160,1)');
                 obj.textContent = '🦴';
@@ -6931,7 +7011,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 19: { /* SOUL — massive damage, huge risk */
+            case 19: { 
                 playSfx('crit');
                 startTrail(originX, originY, impactX, impactY, 'rgba(180,100,255,1)');
                 obj.textContent = '👻';
@@ -6954,9 +7034,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            //  SIREN DECK CARDS (20–25)
+            
 
-            case 20: { /* LULLABY — freeze / sleep */
+            case 20: { 
                 playSfx('mirror');
                 obj.textContent = '🎵';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -6970,7 +7050,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 21: { /* ARIA — heavy resonance damage */
+            case 21: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,180,220,1)');
                 obj.textContent = '🎶';
@@ -6994,7 +7074,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 22: { /* SERENADE — tariff debuff on enemy */
+            case 22: { 
                 playSfx('tariff');
                 obj.textContent = '🌊';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -7007,7 +7087,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 23: { /* BANSHEE — epic wail attack, chains on crit */
+            case 23: { 
                 playSfx('attack');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,100,180,1)');
                 obj.textContent = '👄';
@@ -7031,7 +7111,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 24: { /* CHORUS — resonant shield + regen on crit */
+            case 24: { 
                 playSfx('mirror');
                 obj.textContent = '🎤';
                 obj.style.cssText = 'position:absolute;font-size:64px;left:' + (isP?'12%':'78%') + ';top:' + (isP?'55%':'10%') + ';transition:opacity 0.5s;opacity:1;';
@@ -7051,7 +7131,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 25: { /* ENCORE — powerful drain/attack (simplified: big drain) */
+            case 25: { 
                 playSfx('vampire');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,160,210,1)');
                 obj.textContent = '🌹';
@@ -7077,9 +7157,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            //  BARD DECK CARDS (26–31)
+            
 
-            case 26: { /* STRUM — standard attack with chain potential */
+            case 26: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,140,50,1)');
                 obj.textContent = '🎸';
@@ -7103,7 +7183,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 27: { /* DRUMROLL — multi-hit attack */
+            case 27: { 
                 playSfx('attackSwing');
                 obj.textContent = '🥁';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -7130,7 +7210,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 28: { /* SHANTY — regen over time, heals self */
+            case 28: { 
                 playSfx('heal');
                 obj.textContent = '⚓';
                 obj.classList.add(isP ? 'f-heal-p' : 'f-heal-a');
@@ -7144,7 +7224,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 29: { /* LUTE — drain HP */
+            case 29: { 
                 playSfx('vampire');
                 obj.textContent = '🪕';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -7160,7 +7240,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 30: { /* BALLAD — curse + tariff combo */
+            case 30: { 
                 playSfx('tariff');
                 obj.textContent = '📯';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -7177,7 +7257,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 31: { /* CRESCENDO — escalating damage burst */
+            case 31: { 
                 playSfx('crit');
                 startTrail(originX, originY, impactX, impactY, 'rgba(255,200,50,1)');
                 obj.textContent = '🎺';
@@ -7202,9 +7282,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            // ── IRON VANGUARD CARDS (32–35) ──
+            
 
-            case 32: { /* BULWARK — shield + shorten tariff debuff */
+            case 32: { 
                 playSfx('mirror');
                 obj.textContent = '🏰';
                 obj.style.cssText = 'position:absolute;font-size:64px;left:' + (isP?'12%':'78%') + ';top:' + (isP?'55%':'10%') + ';transition:opacity 0.5s;opacity:1;';
@@ -7226,7 +7306,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 33: { /* CLEAVE — heavy melee attack with chain */
+            case 33: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(200,80,20,1)');
                 obj.textContent = '🪓';
@@ -7250,7 +7330,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 34: { /* RALLY — cleanse poison/burn + regen */
+            case 34: { 
                 playSfx('heal');
                 obj.textContent = '🚩';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:38%;';
@@ -7273,7 +7353,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 35: { /* DESTRIER — mounted charge, bypasses shield, risky */
+            case 35: { 
                 playSfx('crit');
                 startTrail(originX, originY, impactX, impactY, 'rgba(160,120,60,1)');
                 obj.textContent = '🐴';
@@ -7301,9 +7381,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            // ── FOREST WARDEN CARDS (36–39) ──
+            
 
-            case 36: { /* VOLLEY — multi-hit ranged attack */
+            case 36: { 
                 playSfx('attackSwing');
                 obj.textContent = '🪃';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -7330,7 +7410,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 37: { /* HUNTMARK — mark target (tariff-like debuff) */
+            case 37: { 
                 playSfx('tariff');
                 obj.textContent = '🦅';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -7343,7 +7423,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 38: { /* BRAMBLE — freeze + poison combo */
+            case 38: { 
                 playSfx('mirror');
                 obj.textContent = '🌿';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -7359,7 +7439,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 39: { /* HAWKSTRIKE — shield-piercing dive attack */
+            case 39: { 
                 playSfx('attackSwing');
                 startTrail(originX, originY, impactX, impactY, 'rgba(150,200,100,1)');
                 obj.textContent = '🦆';
@@ -7387,9 +7467,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            // ── PLAGUE HERALD CARDS (40–43) ──
+            
 
-            case 40: { /* MIASMA — heavy poison DoT, safe card */
+            case 40: { 
                 playSfx('poisonTick');
                 obj.textContent = '🫧';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:38%;';
@@ -7403,7 +7483,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 41: { /* NECROSIS — instant dmg + burn DoT */
+            case 41: { 
                 playSfx('attack');
                 startTrail(originX, originY, impactX, impactY, 'rgba(80,150,40,1)');
                 obj.textContent = '🦠';
@@ -7431,7 +7511,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 42: { /* CONTAGION — simultaneous poison + burn */
+            case 42: { 
                 playSfx('poisonTick');
                 obj.textContent = '💀';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:38%;';
@@ -7446,7 +7526,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 43: { /* PANDEMIC — catastrophic long poison */
+            case 43: { 
                 playSfx('poisonTick');
                 startTrail(originX, originY, impactX, impactY, 'rgba(40,120,20,1)');
                 obj.textContent = '⚗️';
@@ -7470,9 +7550,9 @@ async function resolve(card, isP) {
                 break;
             }
 
-            // ── GILDED THRONE CARDS (44–46) ──
+            
 
-            case 44: { /* DECREE — tariff on enemy, safe */
+            case 44: { 
                 playSfx('tariff');
                 obj.textContent = '📋';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -7485,7 +7565,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 45: { /* TITHE — drain scaled by active tariff turns */
+            case 45: { 
                 playSfx('vampire');
                 obj.textContent = '💎';
                 obj.classList.add(isP ? 'f-p2a' : 'f-a2p');
@@ -7512,7 +7592,7 @@ async function resolve(card, isP) {
                 break;
             }
 
-            case 46: { /* INQUISITOR — curse + tariff combo */
+            case 46: { 
                 playSfx('tariff');
                 obj.textContent = '⚖️';
                 obj.style.cssText = 'position:absolute;font-size:60px;left:44%;top:40%;';
@@ -7547,7 +7627,7 @@ function dmg(a, toP) {
     if (toP) {
         if (state.pPet > 0) {
             playSfx('petHit');
-            // Pet saves life if direct HP damage would have been fatal
+            
             if (state.pHP <= a) checkAchs({ petSavedLife: true });
             state.pPet -= a;
             if (state.pPet < 0) state.pPet = 0;
@@ -7559,7 +7639,7 @@ function dmg(a, toP) {
 }
 
 const ACHIEVEMENTS = [
-    // ── COMBAT ──
+    
     { id:'first_blood',     icon:'🩸', name:'First Blood',         desc:'Win your first battle.',                                          rarity:'common',    secret:false },
     { id:'veteran',         icon:'⚔️', name:'Veteran',             desc:'Win 10 battles.',                                                 rarity:'uncommon',  secret:false },
     { id:'warlord',         icon:'🗡️', name:'Warlord',             desc:'Win 50 battles.',                                                 rarity:'rare',      secret:false },
@@ -7573,7 +7653,7 @@ const ACHIEVEMENTS = [
     { id:'overkill',        icon:'💥', name:'Overkill',            desc:'Deal 50+ damage in a single hit.',                                rarity:'epic',      secret:false },
     { id:'annihilator',     icon:'☄️', name:'Annihilator',        desc:'Win a battle dealing 200+ total damage.',                         rarity:'legendary', secret:false },
 
-    // ── DICE ──
+    
     { id:'first_crit',      icon:'🎲', name:'Lucky Roll',          desc:'Roll your first Critical.',                                       rarity:'common',    secret:false },
     { id:'crit_streak',     icon:'🎯', name:'Loaded Dice',         desc:'Roll 3 Crits in a single chain.',                                 rarity:'uncommon',  secret:false },
     { id:'crit_50',         icon:'🎰', name:'Fortune\'s Favourite', desc:'Roll 50 total Crits.',                                           rarity:'rare',      secret:false },
@@ -7583,7 +7663,7 @@ const ACHIEVEMENTS = [
     { id:'crit_chain_3',    icon:'⛓️', name:'Chain Reaction',      desc:'Land a full 3-crit chain.',                                       rarity:'rare',      secret:false },
     { id:'roll_6_six',      icon:'🔮', name:'Hexamancer',          desc:'Roll a natural 6 six times in one battle.',                       rarity:'epic',      secret:false },
 
-    // ── CARDS ──
+    
     { id:'use_attack',      icon:'⚔️', name:'Swing and Slice',     desc:'Play the Attack card 20 times.',                                  rarity:'common',    secret:false },
     { id:'use_heal',        icon:'🧪', name:'Field Medic',         desc:'Heal a total of 100 HP across all games.',                        rarity:'uncommon',  secret:false },
     { id:'use_vampire',     icon:'🦇', name:'Bloodsucker',         desc:'Drain HP with Vampire 15 times.',                                 rarity:'uncommon',  secret:false },
@@ -7610,7 +7690,7 @@ const ACHIEVEMENTS = [
     { id:'use_bone',        icon:'🦴', name:'Necrobrawler',        desc:'Throw 30 cursed bones.',                                          rarity:'common',    secret:false },
     { id:'use_shield',      icon:'🛡️', name:'Wall of Iron',        desc:'Block with Shield 10 times.',                                     rarity:'common',    secret:false },
 
-    // ── DECKS ──
+    
     { id:'play_berserker',  icon:'💀', name:'Born to Rage',        desc:'Win a battle with the Berserker deck.',                           rarity:'uncommon',  secret:false },
     { id:'play_necro',      icon:'🔮', name:'Dark Arts',           desc:'Win a battle with the Necromancer deck.',                         rarity:'uncommon',  secret:false },
     { id:'play_guardian',   icon:'🛡️', name:'Bulwark',             desc:'Win a battle with the Guardian deck.',                            rarity:'uncommon',  secret:false },
@@ -7624,12 +7704,12 @@ const ACHIEVEMENTS = [
     { id:'play_gilded_throne', icon:'👑', name:'By Royal Decree',   desc:'Win a battle with the Gilded Throne deck.',                       rarity:'uncommon',  secret:false },
     { id:'play_all_decks',  icon:'📚', name:'Polymath',            desc:'Win at least one battle with every deck.',                        rarity:'epic',      secret:false },
 
-    // ── STREAKS ──
+    
     { id:'win_3',           icon:'🔥', name:'Hot Streak',          desc:'Win 3 battles in a row.',                                         rarity:'uncommon',  secret:false },
     { id:'win_5',           icon:'💥', name:'Rampage',             desc:'Win 5 battles in a row.',                                         rarity:'rare',      secret:false },
     { id:'win_10',          icon:'🌪️', name:'Juggernaut',          desc:'Win 10 battles in a row.',                                        rarity:'legendary', secret:false },
 
-    // ── MISC GAMEPLAY ──
+    
     { id:'play_100',        icon:'🎮', name:'Dedicated',           desc:'Play 100 battles total.',                                         rarity:'rare',      secret:false },
     { id:'play_500',        icon:'🏅', name:'Obsessed',            desc:'Play 500 battles total.',                                         rarity:'epic',      secret:false },
     { id:'heal_full',       icon:'💚', name:'Full Recovery',       desc:'Heal back to full HP from below 20.',                             rarity:'rare',      secret:false },
@@ -7641,7 +7721,7 @@ const ACHIEVEMENTS = [
     { id:'poison_kill',     icon:'☠️', name:'Slow Death',          desc:'Win by poison damage on the final tick.',                         rarity:'rare',      secret:false },
     { id:'burn_kill',       icon:'🔥', name:'Scorched Earth',      desc:'Win by burn damage on the final tick.',                           rarity:'rare',      secret:false },
 
-    // ── NEW MEDIEVAL CARDS ──
+    
     { id:'use_cleave',        icon:'🪓', name:'The Axeman Cometh',    desc:'Strike with Cleave 10 times.',                                    rarity:'uncommon',  secret:false },
     { id:'use_destrier',      icon:'🐴', name:'Full Gallop',          desc:'Charge with Destrier 5 times.',                                   rarity:'rare',      secret:false },
     { id:'use_rally',         icon:'🚩', name:'Hold the Line',        desc:'Rally your troops 10 times.',                                     rarity:'uncommon',  secret:false },
@@ -7657,7 +7737,7 @@ const ACHIEVEMENTS = [
     { id:'pandemic_kill',     icon:'⚗️', name:'The Great Dying',      desc:'Win by Pandemic poison on the final tick.',                       rarity:'epic',      secret:false },
     { id:'double_dot_kill',   icon:'🌀', name:'Death by a Thousand Cuts', desc:'Win with both poison and burn ticking simultaneously.',       rarity:'epic',      secret:false },
 
-    // ── NEW GAMEPLAY MOMENTS ──
+    
     { id:'gold_double_reroll',icon:'💰', name:'Press Your Luck',      desc:'Use a Gold card crit to get 2 rerolls.',                          rarity:'rare',      secret:false },
     { id:'frost_self',        icon:'🧊', name:'Cold Feet',            desc:'Freeze yourself with a failed Frost card.',                       rarity:'uncommon',  secret:false },
     { id:'tariff_self',       icon:'📜', name:'Tax Yourself',         desc:'Debuff yourself with a failed Tariff.',                           rarity:'uncommon',  secret:false },
@@ -7670,7 +7750,7 @@ const ACHIEVEMENTS = [
     { id:'deal_1000',         icon:'⚔️', name:'Bloodthirsty',         desc:'Deal 1000 total damage across all battles.',                      rarity:'rare',      secret:false },
     { id:'heal_500',          icon:'🧪', name:'Apothecary',           desc:'Heal 500 total HP across all battles.',                           rarity:'rare',      secret:false },
 
-    // ── NEW SECRETS ──
+    
     { id:'secret_9',          icon:'🎯', name:'Triple Threat',        desc:'Land 3 crits in a row on 3 different cards in a single turn.',    rarity:'epic',      secret:true },
     { id:'secret_10',         icon:'🃏', name:'Against All Odds',     desc:'Win from 1 HP.',                                                  rarity:'legendary', secret:true },
     { id:'secret_11',         icon:'🏰', name:'The Iron Wall',        desc:'Win a battle without your HP dropping below 60.',                 rarity:'rare',      secret:true },
@@ -7682,8 +7762,8 @@ let achStats = {
     winStreak: 0, lossStreak: 0, maxWinStreak: 0,
     totalCrits: 0, totalFails: 0, totalSelfFails: 0,
     totalHealedHP: 0, totalDamageDealt: 0, totalTariffBlocked: 0,
-    cardCounts: {}, // card id -> times played
-    deckWins: {}, // deck id -> wins
+    cardCounts: {}, 
+    deckWins: {}, 
     vampireUses: 0, plagueUses: 0, petUses: 0, mirrorTriggers: 0,
     tariffUses: 0, bombUses: 0, stormUses: 0, snipeUses: 0,
     infernoUses: 0, frostUses: 0, soulUses: 0, leechUses: 0,
@@ -7757,7 +7837,6 @@ function resetAchievements() {
 
 loadAchievements();
 
-// ── DECK PERSISTENCE ──
 function saveDeckData() {
     try {
         const customs = DECKS.filter(d => d.isCustom);
@@ -7789,7 +7868,6 @@ loadDeckData();
 loadLastDeck();
 setTimeout(() => { buildDeckUI(); }, 0);
 
-// ── UNLOCK ──
 let _toastTimeout = null;
 function unlockAch(id) {
     if (unlockedAchs.has(id)) return;
@@ -7810,7 +7888,6 @@ function showAchToast(def) {
     _toastTimeout = setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-// ── CHECK ACHIEVEMENTS ──
 function checkAchs(context = {}) {
     const s = achStats;
 
@@ -7855,8 +7932,8 @@ function checkAchs(context = {}) {
     if (s._battleAiFails >= 5)  unlockAch('ai_fails_5');
     if (s._battleTurns >= 30)   unlockAch('secret_7');
     if (s._failsThisBattle >= 3 && context.won) unlockAch('secret_6');
-    if (context.won && s._battleLowestHP <= 0) {} // dead
-    if (context.wonWithFreeze)                 unlockAch('freeze_win'); // set in trackGameEnd when won && aFreeze>0
+    if (context.won && s._battleLowestHP <= 0) {} 
+    if (context.wonWithFreeze)                 unlockAch('freeze_win'); 
     if (s.totalSelfFails >= 10) unlockAch('self_dmg_10');
     if (s.totalTariffBlocked >= 50) unlockAch('tariff_blocks_50');
 
@@ -7937,7 +8014,6 @@ function checkAchs(context = {}) {
     if (s.lossStreak >= 25) unlockAch('secret_1');
 }
 
-// ── RENDER ──
 let _achFilter = 'all';
 function openAchievements() {
     toggle('menu-achievements', true);
@@ -7987,8 +8063,6 @@ function renderAchGrid(filter) {
     });
 }
 
-// ── STAT TRACKING HOOKS ──
-
 function trackCardPlayed(cardId, isPlayer) {
     if (!isPlayer) return;
     achStats.cardCounts[cardId] = (achStats.cardCounts[cardId] || 0) + 1;
@@ -8000,7 +8074,7 @@ function trackCardPlayed(cardId, isPlayer) {
         case 3:  achStats.tariffUses++;  break;
         case 4:  achStats.petUses++;     break;
         case 5:  achStats.vampireUses++; break;
-        case 6:  /* mirror tracked on trigger */ break;
+        case 6:   break;
         case 7:  achStats.plagueUses++;  break;
         case 8:  achStats.bombUses++;    break;
         case 9:  achStats.shieldUses++;  break;
@@ -8143,7 +8217,6 @@ function trackGameEnd(won) {
     resetBattleStats();
 }
 
-// ── COMBAT LOG ──────────────────────────────────────────────
 function logCombat(msg) {
     if (!opt('opt-combat-log')) return;
     const log = document.getElementById('combat-log');
@@ -8159,12 +8232,10 @@ function toggleCombatLog() {
     if (log) log.style.display = opt('opt-combat-log') ? 'flex' : 'none';
 }
 
-// ── SKIP AI TURN ─────────────────────────────────────────────
 let _skipRequested = false;
-// skip button removed — no-op kept so existing call sites don't throw
+
 function showSkipBtn() {}
 
-// ── COLORBLIND MODE ──────────────────────────────────────────
 function applyUpdateLog(val) {
     const enabled = val != null ? val : (document.getElementById('opt-update-log')?.checked ?? true);
     const panel = document.getElementById('changelog-panel');
@@ -8181,7 +8252,6 @@ function applyColorblind() {
     });
 }
 
-// ── UI SCALE ────────────────────────────────────────────────
 function applyUIScale(val) {
     const scale = parseFloat(val) / 10;
     const lbl = document.getElementById('scale-label');
@@ -8194,7 +8264,6 @@ function applyUIScale(val) {
     saveSettings();
 }
 
-// ── DECK W/L STATS ──────────────────────────────────────────
 function getDeckWL(deckId) {
     try {
         const stats = JSON.parse(localStorage.getItem('dr_deck_stats') || '{}');
@@ -8212,7 +8281,6 @@ function recordDeckResult(won) {
     } catch(e) {}
 }
 
-// ── LAST USED DECK ───────────────────────────────────────────
 function saveLastDeck() {
     try { localStorage.setItem('dr_last_deck', selectedDeckId); } catch(e) {}
 }
@@ -8223,7 +8291,6 @@ function loadLastDeck() {
     } catch(e) {}
 }
 
-// ── DUPLICATE DECK ───────────────────────────────────────────
 function duplicateCustomDeck(deckId) {
     playSfx('menuClick');
     const src = DECKS.find(d => d.id === deckId);
@@ -8235,7 +8302,6 @@ function duplicateCustomDeck(deckId) {
     saveDeckData();
 }
 
-// ── POST-MATCH STATS ─────────────────────────────────────────
 function showEndStats(won, snap) {
     const el = document.getElementById('end-stats');
     if (!el) return;
@@ -8255,7 +8321,6 @@ function showEndStats(won, snap) {
         <span style="color:#7a5a30;font-size:11px;">Lowest HP: ${Math.max(0, Math.round(lowHP))} &nbsp;·&nbsp; Deck: ${deckName}</span>`;
 }
 
-// ── MUTE ON FOCUS LOSS ───────────────────────────────────────
 window.addEventListener('blur', () => {
     if (!opt('opt-mute-blur')) return;
     if (AC && AC.state === 'running') AC.suspend();
@@ -8265,7 +8330,6 @@ window.addEventListener('focus', () => {
     if (AC && AC.state === 'suspended') AC.resume();
 });
 
-// _gameOverFired, _forfeited, _aiActTimer, _pWasLow, _aWasLow declared at top of script
 function updateHUD() {
     const MAX_HP = 75;
     const pPct = Math.max(0, state.pHP / MAX_HP * 100);
@@ -8335,7 +8399,7 @@ function updateHUD() {
 
     if ((state.pHP <= 0 || state.aHP <= 0) && !_gameOverFired) {
         _gameOverFired = true;
-        closeForfeitPopup(); // dismiss if open when game ends externally
+        closeForfeitPopup(); 
         stopBgAudio();
         showSkipBtn(false);
         const won = state.aHP <= 0;
@@ -8368,17 +8432,14 @@ function updateHUD() {
 }
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     ELECTRON / CROSS-PLATFORM COMPATIBILITY
-     ═══════════════════════════════════════════════════════════ -->
 <script>
 (function () {
 
-    // ── Quit ────────────────────────────────────────────────────────────────
-    // Works in Electron (via electronAPI), standalone browser (window.close),
-    // and gracefully does nothing if neither is available.
+    
+    
+    
     window.quitGame = function () {
-        // Clear Discord Rich Presence before closing so it doesn't linger
+        
         if (window.electronAPI && window.electronAPI.updatePresence) {
             try { window.electronAPI.updatePresence({ screen: 'clear' }); } catch(e) {}
         }
@@ -8389,16 +8450,16 @@ function updateHUD() {
         }
     };
 
-    // Safety net: also clear RPC if the window is closed via OS (X button, Alt+F4, etc.)
+    
     window.addEventListener('beforeunload', function () {
         if (window.electronAPI && window.electronAPI.updatePresence) {
             try { window.electronAPI.updatePresence({ screen: 'clear' }); } catch(e) {}
         }
     });
 
-    // ── AudioContext unlock on first interaction ─────────────────────────────
-    // Electron's Chromium still requires a user gesture to start audio.
-    // We resume the context on the very first click/keydown anywhere.
+    
+    
+    
     function unlockAudio() {
         if (window.AC && window.AC.state === 'suspended') {
             window.AC.resume().catch(() => {});
@@ -8409,19 +8470,19 @@ function updateHUD() {
     document.addEventListener('click',   unlockAudio);
     document.addEventListener('keydown', unlockAudio);
 
-    // ── localStorage persistence path (Electron) ────────────────────────────
-    // In a packaged Electron app, localStorage is stored in the Chromium
-    // profile inside userData — no extra work needed, it persists across
-    // launches automatically. No file-system shim required.
-    // Just make sure your main.js sets:
-    //   app.enableSandbox()  ← keep renderer sandboxed
-    //   and does NOT set  partition: 'nopersist'  on the BrowserWindow session.
+    
+    
+    
+    
+    
+    
+    
 
-    // ── Clipboard fallback for Electron ─────────────────────────────────────
-    // navigator.clipboard requires a secure context (https or localhost).
-    // In a file:// Electron window it may be unavailable; the existing
-    // execCommand fallback already handles this, but we also expose a helper
-    // via electronAPI if the main process provides one.
+    
+    
+    
+    
+    
     window._copyToClipboard = function (text, onSuccess, onFail) {
         if (window.electronAPI && window.electronAPI.copyToClipboard) {
             window.electronAPI.copyToClipboard(text);
@@ -8431,7 +8492,7 @@ function updateHUD() {
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(text).then(onSuccess).catch(onFail || (() => {}));
         } else {
-            // execCommand fallback (works in file:// Electron context)
+            
             const ta = document.createElement('textarea');
             ta.value = text;
             ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
@@ -8443,7 +8504,7 @@ function updateHUD() {
         }
     };
 
-    // ── Patch the two copy-code paths in the game to use the helper ─────────
+    
     window._origCopyDeckCode = window.copyDeckCode;
     window.copyDeckCode = function () {
         const str = document.getElementById('cdb-export-str')?.value;
@@ -8454,31 +8515,34 @@ function updateHUD() {
         );
     };
 
-    // ── Prevent accidental navigation/drag on game container ────────────────
-    // In Electron, dragging an image or link can navigate the window.
+    
+    
     document.addEventListener('dragover',  e => e.preventDefault());
     document.addEventListener('drop',      e => {
         if (!e.target.closest('#mod-drop-zone')) e.preventDefault();
     });
 
-    // ── Disable default right-click context menu outside dev mode ───────────
-    // Comment this out if you want right-click during development.
+    
+    
     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // ── Performance: disable pointer events on non-interactive elements ──────
-    // Prevents Chromium hit-testing overhead on purely decorative elements.
+    
+    
     document.querySelectorAll('#embers, #rune-grid, #menu-bg, #menu-frame, .corner-rune, .candle-glow').forEach(el => {
         el.style.pointerEvents = 'none';
     });
 
-    console.log('[Electron compat] Helpers loaded ✓');
 })();
 </script>
 
 <script>
-// ── CHANGELOG ────────────────────────────────────────────────────────────────
-// Add new entries to the TOP of this array. Each entry shows on the main menu.
+
 const CHANGELOG = [
+    {
+        version: 'v0.5.5',
+        name: 'Music Fix + .json Mod Buff',
+        desc: 'Fixed music not being true 0%, and made 100% a bit louder. Also buffed what modders can do with the .json file.'
+    },
     {
         version: 'v0.5.4',
         name: 'Intro + Achievement Reset Update',
@@ -8511,8 +8575,6 @@ const CHANGELOG = [
     }
 ];
 
-
-
 (function renderChangelog() {
     const container = document.getElementById('cl-entries');
     if (!container) return;
@@ -8529,19 +8591,19 @@ const CHANGELOG = [
 </script>
 
 <script>
-// ── MOD PERSISTENCE ───────────────────────────────────────────────────────────
-// Saves loaded mods to localStorage so they survive session restarts.
+
 (function() {
     const MOD_KEY = 'dr_saved_mods';
 
-    // Re-apply mods saved from last session on startup
+    
     window.addEventListener('DOMContentLoaded', function() {
         try {
             const saved = localStorage.getItem(MOD_KEY);
             if (saved) {
                 const mods = JSON.parse(saved);
-                mods.forEach(mod => {
-                    if (!_loadedMods.find(m => m.name === mod.name)) {
+                mods.forEach(rawMod => {
+                    if (!_loadedMods.find(m => m.name === rawMod.name)) {
+                        const mod = typeof _sanitizeMod === 'function' ? _sanitizeMod(rawMod) : rawMod;
                         _loadedMods.push(mod);
                         applyMod(mod);
                     }
@@ -8551,34 +8613,30 @@ const CHANGELOG = [
         } catch(e) { console.log('[Mods] Failed to restore saved mods:', e); }
     });
 
-    // Patch loadModFile to also save to localStorage after a successful load
+    
     const _origLoadModFile = window.loadModFile;
     window.loadModFile = function(file) {
         _origLoadModFile.apply(this, arguments);
-        // Save happens after the FileReader finishes — we patch applyMod to trigger it
+        
     };
 
-    // Patch applyMod to persist after every successful apply
+    
     const _origApplyMod = window.applyMod;
     window.applyMod = function(mod) {
         if (_origApplyMod) _origApplyMod.apply(this, arguments);
         try { localStorage.setItem(MOD_KEY, JSON.stringify(_loadedMods)); } catch(e) {}
     };
 
-    // Patch unloadMod (if it exists) to also update the saved list
+    
     const _origUnloadMod = window.unloadMod;
     window.unloadMod = function(name) {
         if (_origUnloadMod) _origUnloadMod.apply(this, arguments);
         try { localStorage.setItem(MOD_KEY, JSON.stringify(_loadedMods)); } catch(e) {}
     };
 
-    console.log('[Mods] Persistence hooks loaded ✓');
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     INTRO SEQUENCE — SunCast Studio
-     ═══════════════════════════════════════════════════════════ -->
 <style>
     #intro-overlay {
         position: fixed; inset: 0; z-index: 99999;
@@ -8634,7 +8692,7 @@ const CHANGELOG = [
         font-family: 'Cinzel', serif;
     }
 
-    /* Theme colour overrides for the intro */
+    
     body.theme-blood  { --intro-bright:#ffb0b0; --intro-mid:#d08080; --intro-dim:#7a3030; --intro-rule:rgba(180,30,30,0.25); --intro-sep:#4a1010; }
     body.theme-arcane { --intro-bright:#e8b0ff; --intro-mid:#c090e0; --intro-dim:#6a3a8a; --intro-rule:rgba(160,60,240,0.2); --intro-sep:#3a1050; }
     body.theme-ocean  { --intro-bright:#a0d8ff; --intro-mid:#80c0e0; --intro-dim:#305080; --intro-rule:rgba(40,130,220,0.2); --intro-sep:#102040; }
@@ -8643,7 +8701,7 @@ const CHANGELOG = [
     body.theme-gold   { --intro-bright:#ffe090; --intro-mid:#e0c060; --intro-dim:#806020; --intro-rule:rgba(200,150,0,0.25); --intro-sep:#3a2a00; }
     body.theme-ice    { --intro-bright:#c0e8ff; --intro-mid:#90c8e0; --intro-dim:#3080a0; --intro-rule:rgba(30,140,200,0.2); --intro-sep:#103050; }
 
-    /* Custom reset confirmation modal */
+    
     #ach-reset-modal {
         display: none;
         position: fixed; inset: 0; z-index: 99998;
@@ -8687,7 +8745,6 @@ const CHANGELOG = [
     #ach-reset-box .modal-btn-confirm:hover { color: #ff9090; border-color: rgba(200,0,0,0.7); }
 </style>
 
-<!-- Custom Achievement Reset Modal -->
 <div id="ach-reset-modal">
     <div id="ach-reset-box">
         <div class="modal-icon">⚠</div>
@@ -8705,13 +8762,13 @@ const CHANGELOG = [
 
 <div id="intro-overlay">
 
-    <!-- Stage 1: Publisher -->
+    
     <div class="intro-stage" id="intro-s1">
         <div class="intro-label">Published by</div>
         <div class="intro-title">SunCast Studio</div>
     </div>
 
-    <!-- Stage 2: About -->
+    
     <div class="intro-stage" id="intro-s2">
         <div class="intro-divider"></div>
         <p class="intro-body">
@@ -8722,7 +8779,7 @@ const CHANGELOG = [
         <div class="intro-divider"></div>
     </div>
 
-    <!-- Stage 3: Content Creator Notice -->
+    
     <div class="intro-stage" id="intro-s3">
         <div class="intro-label">Content Creator Notice</div>
         <p class="intro-body">
@@ -8734,7 +8791,7 @@ const CHANGELOG = [
         </p>
     </div>
 
-    <!-- Stage 4: Made With -->
+    
     <div class="intro-stage" id="intro-s4">
         <div class="intro-label">Made with the help of</div>
         <div class="intro-tech">
@@ -8751,14 +8808,14 @@ const CHANGELOG = [
 
 <script>
 (function () {
-    // Check if user has disabled the intro
+    
     if (localStorage.getItem('dr_skip_intro') === 'true') {
         const ov = document.getElementById('intro-overlay');
         if (ov) ov.remove();
         return;
     }
 
-    // Suppress music boot until intro is done
+    
     window._introMusicSuppressed = true;
 
     const overlay = document.getElementById('intro-overlay');
@@ -8825,18 +8882,15 @@ const CHANGELOG = [
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     DISCORD RICH PRESENCE HOOKS — added by setup
-     ═══════════════════════════════════════════════════════════ -->
 <script>
 (function () {
     if (!window.electronAPI) return;
 
-    // ── Persist enabled state across sessions ──────────────────────────────────
+    
     const RPC_KEY = 'dr_discord_rpc_enabled';
-    let rpcEnabled = localStorage.getItem(RPC_KEY) !== 'false'; // default ON
+    let rpcEnabled = localStorage.getItem(RPC_KEY) !== 'false'; 
 
-    // Exposed globally so the settings checkbox onchange can call it
+    
     window.setDiscordRPC = function (enabled) {
         rpcEnabled = enabled;
         localStorage.setItem(RPC_KEY, enabled ? 'true' : 'false');
@@ -8867,7 +8921,7 @@ const CHANGELOG = [
     }
 
     function sendPresence(screenOverride) {
-        if (!rpcEnabled) return; // respect the toggle
+        if (!rpcEnabled) return; 
 
         const deck = (typeof DECKS !== 'undefined' && typeof selectedDeckId !== 'undefined')
             ? DECKS.find(d => d.id === selectedDeckId)
@@ -8887,7 +8941,7 @@ const CHANGELOG = [
     window.toggle = function (id, show) {
         if (_originalToggle) _originalToggle.apply(this, arguments);
 
-        // Fade changelog panel — only hide when game actually starts, restore on main menu
+        
         const cl = document.getElementById('changelog-panel');
         if (cl) {
             if (id === 'menu-main' && show) {
@@ -8941,7 +8995,6 @@ const CHANGELOG = [
         sendPresence('menu-main');
     });
 
-    console.log('[Discord RPC] Presence hooks loaded ✓');
 })();
 </script>
 </body>
